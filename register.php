@@ -30,8 +30,29 @@
                 $_nom = $_POST["nom"];
                 $_prenom = $_POST["prenom"];
                 $_nobjet =  $_POST["nobjet"];
+
                 if ($_nom!=null AND $_prenom!=null AND $_nobjet!=null) {
-                    echo "Inscription complète !";
+
+                    $servername = "localhost";
+                    $username = "root";
+                    $password = "root";
+                    $dbname = "app";
+
+                    // Create connection
+                    $conn = new mysqli($servername, $username, $password, $dbname);
+                    // Check connection
+                    if ($conn->connect_error) {
+                      die("Connection failed: " . $conn->connect_error);
+                    }
+
+                    $sql = "INSERT INTO utilisateur(Nom,Prenom,Mail,Password,numero_objet) VALUES ('$_nom', '$_prenom', '$_mail','$_pass1',$_nobjet)";
+
+                    if ($conn->query($sql) === TRUE) {
+                        echo "New record created successfully";
+                    } else {
+                    echo "Error: " . $sql . "<br>" . $conn->error;
+                    }
+                    $conn->close();
                 }
         ?>
     <form action="register.php" method="post">
