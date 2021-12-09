@@ -1,0 +1,91 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #FDFDFF;
+    margin:0;
+    padding:0;
+
+}
+
+/*Header*/
+nav{
+  list-style-type: none;
+  position:static;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  padding-top: 1%;
+  height: 10%;
+  width: 98vw;
+  white-space: nowrap;
+}
+
+
+nav .bouton {
+  text-align: center;
+  display: inline-block;
+  margin-left: 1%;
+  margin-right: 2%;
+  align-items: center; 
+}
+
+.logo{
+    background-image: url(img/blank.png);
+    background-repeat:no-repeat;
+    background-size: contain;
+    width: 9%;
+    height: 100%
+}
+.span{
+    color: #8AC144 ;
+}
+.write{
+    line-height: 50px;
+    font-family: Poppins;
+    padding: 2%;
+}
+.bouton{
+  font-style: normal;
+font-weight: normal;
+font-size: 24px;
+align-content: center;
+line-height: 36px;
+text-align: center;
+color: #2C2C2C;
+background-color: transparent;
+padding: 0;
+border: none;
+}
+
+/*Footer*/
+footer{
+  bottom: 0;
+  position:absolute;
+  display: block;
+  text-align: center;
+  width: 100%;
+  overflow:hidden;
+  background-color: #2C2C2C;
+  color: #fff;
+}
+
+.ranking{
+    display: grid;
+    grid-template-columns: 50vw;
+    padding: 0;
+    margin: 0;
+    margin-left: 25vw;
+    grid-gap: 10px;
+    align-items: center;
+    align-content: center;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+.case{
+    border: solid 2px grey;
+    padding-left: 20px;
+}
+
+.alignedroite{
+    float: right;
+    padding-right: 20px;
+}

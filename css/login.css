@@ -148,6 +148,10 @@ h2{
   text-align: center;
 }
 
-.red1{
+.error{
   color:red;
+}
+.errorcenter{
+  text-align: center;
+  color: red;
 }

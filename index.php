@@ -20,7 +20,7 @@
             echo(" 
             <a href='index.php'><button class='bouton' href='bottom.html' style='font-size: 50px;'><img src='img/blank.png' class='logo'>Smart<span class='span'>Care</span></button></a>
             <a href='account.php'><button class='bouton' style='float: right'><div class='write'>Mon profil</div></button></a>
-            <a href='#'><button class='bouton' style='float: right'><div class='write'>Leaderboard</div></button></a>
+            <a href='leaderboard.php'><button class='bouton' style='float: right'><div class='write'>Leaderboard</div></button></a>
             <a href='#'><button class='bouton' style='float: right'><div class='write'>Dashboard</div></button></a>
             ");
         } else {

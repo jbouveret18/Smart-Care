@@ -12,26 +12,29 @@
     <title>Login</title>
 </head>
 <body>
-    <nav>
+    
         <?php
         session_start();
         if (isset($_SESSION['connected']) && $_SESSION=true ) {
-            echo(" 
+            echo("<nav>
             <a href='index.php'><button class='bouton' href='bottom.html' style='font-size: 50px;'><img src='img/blank.png' class='logo'>Smart<span class='span'>Care</span></button></a>
             <a href='#account.php'><button class='bouton' style='float: right'><div class='write'>Mon profil</div></button></a>
-            <a href='#'><button class='bouton' style='float: right'><div class='write'>Leaderboard</div></button></a>
-            <a href='#'><button class='bouton' style='float: right'><div class='write'>Dashboard</div></button></a>
+            <a href='leaderboard.php'><button class='bouton' style='float: right'><div class='write'>Leaderboard</div></button></a>
+            <a href='#'><button class='bouton' style='float: right'><div class='write'>Dashboard</div></button></a></nav>
             ");
         } else {
-        echo("
+        echo("<nav>
         <a href='index.php'><button class='bouton' href='bottom.html' style='font-size: 50px;'><img src='img/blank.png' class='logo'>Smart<span class='span'>Care</span></button></a>
         <a href='#'><button class='bouton' style='float: right'><div class='write'>Langues</div></button></a>
         <a href='index.php#discover'><button class='bouton' style='float: right'><div class='write'>Découvrir</div></button></a>
         <a href='login.php'><button class='bouton' href='#' style='float: right'><div class='write'>Connexion</div></button></a>
-        <a href='#'><button class='bouton' href='#' style='float: right'><div class='write'>Nous rejoindre</div></button></a>");}
-        ?>
-    </nav>
+        <a href='#'><button class='bouton' href='#' style='float: right'><div class='write'>Nous rejoindre</div></button></a></nav>
+        ");}
 
+        if (isset($_GET['error']) && $_GET['error']=5){
+            echo("<span class='errorcenter'><p>Vous devez être connecté pour accéder au leaderboard</p></span>");
+        }
+        ?>
     <div class="form">
         <div class="login">
             <h2>Connexion</h2>
@@ -41,7 +44,7 @@
           
                 <label for="password">Mot de passe</label>
                 <input type="password" id="password" name="password" placeholder="Votre mot de passe..">
-                <span class="red1">
+                <span class="error">
                 <?php
                 if (isset($_GET["error"])) {
                     if ($_GET["error"] == 3) {
@@ -60,7 +63,7 @@
             <h2>Enregistrement</h2>
             <form action="registerprocess.php" method="post">
                 <label for="usermail">Adresse mail:</label>
-                <span class="red1">
+                <span class="error">
                 <?php
                 if (isset($_GET["error"])) {
                     if ($_GET["error"] == 1) {
@@ -75,7 +78,7 @@
                 <input type="password" id="password" name="password" placeholder="Votre mot de passe.." required="required" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" title="Votre mot de passe doit contenir 8 caractères dont au moins une majuscule, un caractère spécial et un chiffre"><br>
                 
                 <label for="password">Confirmez votre mot de passe</label>
-                <span class="red1">
+                <span class="error">
                 <?php
                 if (isset($_GET["error"])) {
                     if ($_GET["error"] == 2) {
