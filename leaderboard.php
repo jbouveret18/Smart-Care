@@ -40,7 +40,7 @@
         $sql ='SELECT nom,prenom,score FROM utilisateur ORDER BY score DESC LIMIT 100;';
         $result = $conn->query($sql);
         while($row = mysqli_fetch_assoc($result)) {
-             echo("<div class='case'>$row[nom] $row[prenom] <span class='alignedroite'>$row[score]</div></div>"); 
+             echo("<div class='case'>$row[nom] $row[prenom] <span class='alignedroite'>$row[score]</span></div>"); 
         }
         ?>
     </div>
