@@ -58,8 +58,8 @@ border: none;
 
 /*Footer*/
 footer{
-  position: relative;
   bottom: 0;
+  position:absolute;
   display: block;
   text-align: center;
   width: 100%;
@@ -72,6 +72,7 @@ footer{
     position:static;
     width:96vw;
     margin: 2vw;
+    margin-top: 0;
     display: flex;
     flex-direction:row;
     padding-top: 2vh;
