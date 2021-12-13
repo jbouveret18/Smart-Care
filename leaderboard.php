@@ -12,16 +12,7 @@
 </head>
 <body>
     <?php
-        session_start();
-        if (isset($_SESSION['connected']) && $_SESSION=true ) {
-            echo(" <nav>
-            <a href='index.php'><button class='bouton' href='bottom.html' style='font-size: 50px;'><img src='img/blank.png' class='logo'>Smart<span class='span'>Care</span></button></a>
-            <a href='account.php'><button class='bouton' style='float: right'><div class='write'>Mon profil</div></button></a>
-            <a href='#'><button class='bouton' style='float: right'><div class='write'>Leaderboard</div></button></a>
-            <a href='#'><button class='bouton' style='float: right'><div class='write'>Dashboard</div></button></a></nav>
-            ");
-        } else {    
-            header('Location: login.php?error=5');}
+        include 'navbar.php';
     ?>
     <div class='ranking'>
         <?php
@@ -35,6 +26,7 @@
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
         }
+
         //On va prendre le nom, prénom et le score des 100 utilisateur qui ont le plus grand score et les afficher
         //Le calcul du score reste à définir
         $sql ='SELECT nom,prenom,score FROM utilisateur ORDER BY score DESC LIMIT 100;';
@@ -44,5 +36,28 @@
         }
         ?>
     </div>
+    <?php
+    //A fixer
+    session_start();
+    $servername = "localhost";
+    $username = "root";
+    $password = "root";
+    $dbname = "app";
+    // Create connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+    echo("rouge");
+    $id=$_SESSION['id'];
+    echo($id);
+    $sqlscore= "SELECT nom,prenom,score FROM utilisateur WHERE id=$id";
+    $resultscore = $conn->query($sqlscore);
+    echo("bleu");
+    if ($resultscore->num_rows > 0) {
+        echo("$resultscore[nom] $resultscore[prenom], votre score est $resultscore[score]");
+    }
+    ?>
 </body>
 </html>

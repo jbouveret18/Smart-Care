@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
+    <?php
+        include 'navbar.php';
+    ?>
     <a href='disconnect.php'><button class='bouton' style='float: right'><div class='write'>Disconnect</div></button></a>
 </body>
 </html>

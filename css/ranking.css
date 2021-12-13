@@ -75,7 +75,6 @@ footer{
     padding-top: 5vh;
     margin: 0;
     margin-left: 25vw;
-    grid: gap 2px;
     align-items: center;
     align-content: center;
 }
