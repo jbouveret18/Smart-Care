@@ -198,3 +198,32 @@ footer{
   height: 70%;
   width:auto;
 }
+.footertxt1{
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 16px;
+left: 0%;
+}
+.footerdiv1{
+  position: absolute;
+left: 20%;
+right: 20%;
+bottom: 35%;
+height: 1px;
+background: #FDFDFF;
+}
+a{
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 16px;
+color: #96C836;
+text-decoration: none;
+}
+.footerdiv2{
+  position: absolute;
+  bottom: 0%;
+  justify-content: space-between;
+  width: 60%;
+}
