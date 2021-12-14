@@ -14,12 +14,19 @@
 <body>
     
     <?php
-        include 'navbar.php';
+        include 'php/navbar.php';
+        
+        if (isset($_GET['error']) && $_GET['error']==5){
+            echo("<span class='errorcenter'><p>Vous devez être connecté pour accéder au leaderboard</p></span>");
+        }
+        if (isset($_GET['error']) && $_GET['error']==6){
+            echo("<span class='errorcenter'><p>Vous devez être connecté pour accéder au dashboard</p></span>");
+        }
     ?>
     <div class="form">
         <div class="login">
             <h2>Connexion</h2>
-            <form action="loginform.php" method ="post">
+            <form action="php/loginform.php" method ="post">
                 <label for="usermail">Adresse mail:</label>
                 <input type="text" id="usermail" name="mail" placeholder="Votre mail.." pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required="required"><br>
           
@@ -42,7 +49,7 @@
 
           <div class="login">
             <h2>Enregistrement</h2>
-            <form action="registerprocess.php" method="post">
+            <form action="php/registerprocess1.php" method="post">
                 <label for="usermail">Adresse mail:</label>
                 <span class="error">
                 <?php

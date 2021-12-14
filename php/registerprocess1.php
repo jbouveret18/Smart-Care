@@ -1,12 +1,13 @@
 <?php
     $servername = "localhost";
     $username = "root";
-    $password = "root";
+    $password = "";
     $dbname = "app";
 
-    $_mail = $_POST["mail"];
-    $_pass1 = password_hash($_POST["password"],PASSWORD_DEFAULT);
-    $_pass2 = $_POST["password2"];
+    $_mail = htmlspecialchars($_POST["mail"], ENT_COMPAT,'ISO-8859-1', true);
+    $_pass1 = password_hash(htmlspecialchars($_POST["password"], ENT_COMPAT,'ISO-8859-1', true),PASSWORD_DEFAULT);
+    $_pass2 = htmlspecialchars($_POST["password2"], ENT_COMPAT,'ISO-8859-1', true);
+    
     // Create connection
     $conn = new mysqli($servername, $username, $password, $dbname);
     // Check connection
@@ -19,16 +20,16 @@
 
     if ($result->num_rows > 0) {
         echo("<p>L'adresse mail existe déjà</p>");
-        header("Location: login.php?error=1");
+        header("Location: ../login.php?error=1");
     } else {
         echo("<p>L'adresse mail n'existe pas</p>");
         if (password_verify($_pass2,$_pass1)){
             session_start();
             $_SESSION['mail'] = $_mail;
             $_SESSION['pass'] = $_pass1;
-            header('Location: register.php');
+            header('Location: ../register2.php');
         } else {
-            header('Location: login.php?error=2');
+            header('Location: ../login.php?error=2');
         }
     }
 ?>

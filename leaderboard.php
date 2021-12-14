@@ -12,13 +12,17 @@
 </head>
 <body>
     <?php
-        include 'navbar.php';
+        session_start();
+        if (!isset($_SESSION['connected'])) {
+            header('Location: login.php?error=5');
+        }
+        include 'php/navbar.php';
     ?>
     <div class='ranking'>
         <?php
         $servername = "localhost";
         $username = "root";
-        $password = "root";
+        $password = "";
         $dbname = "app";
         // Create connection
         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -38,10 +42,9 @@
     </div>
     <?php
     //A fixer
-    session_start();
     $servername = "localhost";
     $username = "root";
-    $password = "root";
+    $password = "";
     $dbname = "app";
     // Create connection
     $conn = new mysqli($servername, $username, $password, $dbname);

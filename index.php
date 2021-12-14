@@ -14,7 +14,7 @@
 <body>
 
     <?php
-        include 'navbar.php';
+        include 'php/navbar.php';
     ?>
 
     <div class="middlemainflex">

@@ -14,6 +14,9 @@
     <?php
         include 'php/navbar.php';
     ?>
-    <a href='php/disconnect.php'><button class='bouton' style='float: right'><div class='write'>Disconnect</div></button></a>
+
+    <footer>
+        <p>©2021 SmartCare</p>
+    </footer>
 </body>
 </html>

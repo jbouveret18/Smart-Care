@@ -4,87 +4,77 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/register.css">
     <link rel="shortcut icon" href="img/blank.png" type="image/x-icon">
     <style>
         @import url('https://fonts.googleapis.com/css?family=Poppins');
     </style>
     <title>Login</title>
-
 </head>
 <body>
-    <nav>
-        <?php
-        session_start();
-        if (isset($_SESSION['connected']) && $_SESSION=true ) {
-            echo(" 
-            <a href='index.php'><button class='bouton' href='bottom.html' style='font-size: 50px;'><img src='img/blank.png' class='logo'>Smart<span class='span'>Care</span></button></a>
-            <a href='#account.php'><button class='bouton' style='float: right'><div class='write'>Mon profil</div></button></a>
-            <a href='#'><button class='bouton' style='float: right'><div class='write'>Leaderboard</div></button></a>
-            <a href='#'><button class='bouton' style='float: right'><div class='write'>Dashboard</div></button></a>
-            ");
-        } else {
-        echo("
-        <a href='index.php'><button class='bouton' href='bottom.html' style='font-size: 50px;'><img src='img/blank.png' class='logo'>Smart<span class='span'>Care</span></button></a>
-        <a href='#'><button class='bouton' style='float: right'><div class='write'>Langues</div></button></a>
-        <a href='index.php#discover'><button class='bouton' style='float: right'><div class='write'>Découvrir</div></button></a>
-        <a href='login.php'><button class='bouton' href='#' style='float: right'><div class='write'>Connexion</div></button></a>
-        <a href='#'><button class='bouton' href='#' style='float: right'><div class='write'>Nous rejoindre</div></button></a>");}
-        ?>
-    </nav>
-
-    <div class="register">
-        <div class="login">
-        <?php 
-                session_start();
-                $_mail = $_SESSION['mail'];
-                $_pass1 = $_SESSION['pass'];
-                $_nom = $_POST["nom"];
-                $_prenom = $_POST["prenom"];
-                $_nobjet =  $_POST["nobjet"];
-
-                if ($_nom!=null AND $_prenom!=null AND $_nobjet!=null) {
-
-                    $servername = "localhost";
-                    $username = "root";
-                    $password = "root";
-                    $dbname = "app";
-
-                    // Create connection
-                    $conn = new mysqli($servername, $username, $password, $dbname);
-                    // Check connection
-                    if ($conn->connect_error) {
-                      die("Connection failed: " . $conn->connect_error);
-                    }
-
-                    $sql = "INSERT INTO utilisateur(Nom,Prenom,Mail,Password,numero_objet) VALUES ('$_nom', '$_prenom', '$_mail','$_pass1',$_nobjet)";
-
-                    if ($conn->query($sql) === TRUE) {
-                        echo "New record created successfully";
-                    } else {
-                    echo "Error: " . $sql . "<br>" . $conn->error;
-                    }
-                    $conn->close();
-                }
-        ?>
-    <form action="register.php" method="post">
-
-        <label for="Nom">Nom:</label>
-        <input type="text" id="usernom" name="nom" placeholder="Veuillez saisir votre nom.." required="required" title="Veullez saisir votre nom"><br>
-  
-        <label for="Prenom">Prénom:</label>
-        <input type="text" id="Userprenom" name="prenom" placeholder="Veuillez saisir votre nom.." required="required" title="Veuillez saisir votre prénom"><br>
-
-        <label for="nobjet">Entrez votre numéro d'objet</label>
-        <input type="text" id="usernobjet" name="nobjet" placeholder="Veuillez saisir votre numéro d'objet.." required="required" pattern="[0-9]{1,10}" title="Veuillez saisir un numéro d'objet valide"><br>
-
-        <span class="center">
-            <input type="submit" value="S'inscrire">
-        </span>
     
-    </form>
+    <?php
+        include 'php/navbar.php';
+        
+        if (isset($_GET['error']) && $_GET['error']==5){
+            echo("<span class='errorcenter'><p>Vous devez être connecté pour accéder au leaderboard</p></span>");
+        }
+        if (isset($_GET['error']) && $_GET['error']==6){
+            echo("<span class='errorcenter'><p>Vous devez être connecté pour accéder au dashboard</p></span>");
+        }
+    ?>
+    <h2>S'inscrire</h2>
+    <div class="formulaire">
+        <form action="php/registerfull.php" method ="post">
+        <div class="login">
+            
+            
+                <label for="usermail">Adresse mail:</label>
+                <input type="text" id="usermail" name="mail" placeholder="Votre mail.." pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required="required"><br>
+                <span class="error">
+                <?php
+                if (isset($_GET["error"])) {
+                    if ($_GET["error"] == 1) {
+                        echo("Cette adresse mail est déjà utilisée<br>");
+                    }
+                }
+                ?>
+                </span>
+            
+                <label for="password">Mot de passe:</label>
+                <input type="password" id="password" name="password" placeholder="Votre mot de passe.." required="required" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" title="Votre mot de passe doit contenir 8 caractères dont au moins une majuscule, un caractère spécial et un chiffre"><br>
+
+                <label for="password2">Confirmez votre mot de passe:</label>
+                <span class="error">
+                <?php
+                if (isset($_GET["error"])) {
+                   if ($_GET["error"] == 2) {
+                        echo("<br>Veuillez saisir deux mots de passe identiques.");
+                    }
+                }
+                ?>
+                </span>
+                <input type="password" id="password2" name="password2" placeholder="Confirmez votre mot de passe.." required="required"><br>
+            
+          </div>
+
+          <div class="login">
+                <label for="nom">Nom:</label>
+
+                <input type="text" id="nom" name="nom" placeholder="Votre nom.." required="required"><br>
+
+                <label for="prenom">Prénom:</label>
+                <input type="text" id="prenom" name="prenom" placeholder="Votre prenom.." required="required"><br>
+                
+                <label for="nobjet">Votre numéro d'objet:</label>
+                <input type="text" id="nobjet" name="nobjet" placeholder="Votre numéro d'objet.." required="required"><br>
+            
+          </div>
+          <input type="submit" value="S'inscrire">
+        </form>
     </div>
-    </div>
+    
+
 
     <footer>
         <p>©2021 SmartCare</p>
