@@ -12,6 +12,10 @@
 </head>
 <body>
     <?php
+        session_start();
+        if (!isset($_SESSION['connected'])) {
+            header('Location: login.php?error=7');
+        }
         include 'php/navbar.php';
     ?>
     <a href='php/disconnect.php'><button class='bouton' style='float: right'><div class='write'>Disconnect</div></button></a>

@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +16,6 @@
 </head>
 <body>
     <?php
-        session_start();
         if (!isset($_SESSION['connected'])) {
             header('Location: login.php?error=5');
         }
@@ -52,13 +55,11 @@
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
-    echo("rouge");
     $id=$_SESSION['id'];
-    echo($id);
     $sqlscore= "SELECT nom,prenom,score FROM utilisateur WHERE id=$id";
     $resultscore = $conn->query($sqlscore);
-    echo("bleu");
     if ($resultscore->num_rows > 0) {
+        $resultscore = mysqli_fetch_assoc($resultscore);
         echo("$resultscore[nom] $resultscore[prenom], votre score est $resultscore[score]");
     }
     ?>

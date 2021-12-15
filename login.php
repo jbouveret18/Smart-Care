@@ -22,6 +22,9 @@
         if (isset($_GET['error']) && $_GET['error']==6){
             echo("<span class='errorcenter'><p>Vous devez être connecté pour accéder au dashboard</p></span>");
         }
+        if (isset($_GET['error']) && $_GET['error']==7){
+            echo("<span class='errorcenter'><p>Vous devez être connecté pour accéder à votre compte</p></span>");
+        }
     ?>
     <div class="form">
         <div class="login">

@@ -3,7 +3,7 @@
             { 
                 session_start(); 
             } 
-        if (isset($_SESSION['connected']) && $_SESSION=true ) {
+        if (isset($_SESSION['connected']) && $_SESSION==true ) {
             echo("<nav>
             <a href='index.php'><button class='bouton' href='bottom.html' style='font-size: 50px;'><img src='img/blank.png' class='logo'>Smart<span class='span'>Care</span></button></a>
             <a href='account.php'><button class='bouton' style='float: right'><div class='write'>Mon profil</div></button></a>

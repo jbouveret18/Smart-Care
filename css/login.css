@@ -81,17 +81,6 @@ footer{
 
 }
 
-.register{
-  position:static;
-  width:96vw;
-  margin: 2vw;
-  justify-content: center;
-  display: flex;
-  align-content: center;
-  padding-top: 2vh;
-  height: auto;
-}
-
 .login{
   width:50%;
   margin-left:2%;
