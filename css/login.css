@@ -13,8 +13,8 @@ nav{
   margin: 0;
   padding: 0;
   top: 0;
-  padding-top: 1%;
-  height: 10%;
+  padding-top: 1vh;
+  height: 10vh;
   width: 98vw;
   white-space: nowrap;
 }
@@ -23,8 +23,8 @@ nav{
 nav .bouton {
   text-align: center;
   display: inline-block;
-  margin-left: 1%;
-  margin-right: 2%;
+  margin-left: 1vw;
+  margin-right: 2vw;
   align-items: center; 
 }
 
@@ -41,7 +41,7 @@ nav .bouton {
 .write{
     line-height: 50px;
     font-family: Poppins;
-    padding: 2%;
+    padding-top: 2vh;
 }
 .bouton{
   font-style: normal;
@@ -58,8 +58,8 @@ border: none;
 
 /*Footer*/
 footer{
-  bottom: 0;
-  position:absolute;
+  position: fixed;
+  bottom:0;
   display: block;
   text-align: center;
   width: 100%;
@@ -124,7 +124,7 @@ input[type=submit]{
   border: none;
   color: #FDFDFF;
   font-family: Poppins; 
-  font-size: 36px;
+  font-size: 2vw;
   line-height: 54px;
 }
 
