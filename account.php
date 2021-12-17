@@ -8,7 +8,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css?family=Poppins');
     </style>
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/account.css">
 </head>
 <body>
     <?php
@@ -18,6 +18,6 @@
         }
         include 'php/navbar.php';
     ?>
-    <a href='php/disconnect.php'><button class='bouton' style='float: right'><div class='write'>Disconnect</div></button></a>
+    <a href='php/disconnect.php'><button class='bouton'><div class='write'>Disconnect</div></a>
 </body>
 </html>

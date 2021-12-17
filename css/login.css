@@ -15,8 +15,7 @@ nav{
   top: 0;
   padding-top: 1vh;
   height: 10vh;
-  width: 98vw;
-  white-space: nowrap;
+  width: 100vw;
 }
 
 
@@ -39,7 +38,7 @@ nav .bouton {
     color: #8AC144 ;
 }
 .write{
-    line-height: 50px;
+    line-height: 5vh;
     font-family: Poppins;
     padding-top: 2vh;
 }
