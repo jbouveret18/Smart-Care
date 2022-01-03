@@ -19,10 +19,8 @@
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
-        echo("<p>L'adresse mail existe déjà</p>");
         header("Location: ../login.php?error=1");
     } else {
-        echo("<p>L'adresse mail n'existe pas</p>");
         if (password_verify($_pass2,$_pass1)){
             session_start();
             $_SESSION['mail'] = $_mail;

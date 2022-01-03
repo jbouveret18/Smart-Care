@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
+    <link rel='stylesheet' href='css/common.css'>
     <link rel="shortcut icon" href="img/blank.png" type="image/x-icon">
     <style>
         @import url('https://fonts.googleapis.com/css?family=Poppins');
@@ -19,7 +20,7 @@
 
     <div class="middlemainflex">
     <div class="leftflex">
-        <div class="txt1">Ameliorer</div></br>
+        <div class="txt1">Améliorer</div></br>
         <div class="txt2">Votre <span class="spx">bien-être</span></div></br>
         <div class="txt3">Grâce à notre assistant bien-être et aux 5 capteurs présents sur notre montre connectée</div></br>
         <button class="rect" href="#">Nous rejoindre</button>

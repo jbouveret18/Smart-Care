@@ -9,6 +9,7 @@
         @import url('https://fonts.googleapis.com/css?family=Poppins');
     </style>
     <link rel="stylesheet" href="css/dashboard.css">
+    <link rel='stylesheet' href='css/common.css'>
 </head>
 <body>
     <?php
