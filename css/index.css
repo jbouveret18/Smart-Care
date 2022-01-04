@@ -3,13 +3,6 @@ html{
   scroll-behavior:smooth;
 }
 
-body{
-  font-family: 'Poppins', sans-serif;
-  background-color: #FDFDFF;
-  margin:0;
-  padding:0;
-}
-
 /*Gros titre de la montre*/
 h1{
     color: #96C836;

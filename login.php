@@ -34,7 +34,7 @@
                 <label for="usermail">Adresse mail:</label>
                 <input type="text" id="usermail" name="mail" placeholder="Votre mail.." pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required="required"><br>
           
-                <label for="password">Mot de passe</label>
+                <label for="password">Mot de passe:</label>
                 <input type="password" id="password" name="password" placeholder="Votre mot de passe..">
                 <span class="error">
                 <?php
@@ -47,8 +47,10 @@
                     }
                 }
                 ?>
+                </span>
                 <input type="submit" value="Se connecter">
             </form>
+            <p><br><a href='register.php'>Pas encore de compte? Rejoignez-nous</a></p>
           </div>
     </div>
     

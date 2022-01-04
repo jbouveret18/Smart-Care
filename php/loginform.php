@@ -22,11 +22,14 @@
             $_SESSION['id'] = $_passHash['id'];
             $_SESSION['nom'] = $_passHash['nom'];
             $_SESSION['prenom'] = $_passHash['prenom'];
+            $conn->close();
             header('Location: ../index.php');
         } else {
+            $conn->close();
             header('Location: ../login.php?error=3');
         }
     } else {
+        $conn->close();
         header('Location: ../login.php?error=4');
     }
 
