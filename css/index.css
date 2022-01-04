@@ -1,0 +1,231 @@
+/* Gérer l'ensemble des actions de la page*/
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+  background-color: #FDFDFF;
+  margin:0;
+  padding:0;
+}
+
+/*Gros titre de la montre*/
+h1{
+    color: #96C836;
+    font-weight: 500;
+    margin-top: 0px;
+}
+
+/*Sous titre de la montre */
+h3{
+    color: #96C836;
+    margin-top:0px;
+    font-weight: 500;
+}
+
+/*Grille de la partie Découvrir*/
+.montre {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    position: relative;
+    left: 5%;
+    margin-right: 10%;
+    margin-top: 10%;
+    grid-gap: 10px;
+    text-align: left;
+    grid-auto-rows: minmax(5px, auto);
+
+  }
+  .montre_pic{
+    height:auto;
+    width: 75%;
+    vertical-align: middle;
+  }
+  .one {
+    grid-column: 1;
+    grid-row: 1/7;
+    text-align: center;
+    align-self: center;
+
+  }
+  .two {
+    grid-column: 2 / 4;
+    grid-row: 1/3;
+  }
+  .three {
+    grid-column: 2;
+    grid-row: 4;
+  }
+  .four {
+    grid-column: 3;
+    grid-row: 4;
+  }
+  .five {
+    grid-column: 2;
+    grid-row: 6;
+  }
+  .six {
+    grid-column: 3;
+    grid-row: 6;
+  }
+  .sept{
+    grid-column: 1/3;
+    grid-row:6/8
+  }
+
+/*Elements centraux de la page d'accueil*/
+.middlemainflex{
+  position: static;
+  margin-top: 5%;
+  display: flex;
+  align-self: center;
+  align-items: center;
+}
+
+.leftflex{
+  display: static;
+  flex-direction: column;
+  margin-left: 8%;
+  width: 60%;
+  background-position: left;
+  margin-top: 10%;
+  color: #2C2C2C;
+  font-family: Poppins;
+  font-weight: 500;
+  font-style: normal;
+}
+.rightflex{
+  display: static;
+  flex-direction: row;
+  align-items: baseline;
+  width: 40%;
+}
+
+.txt1{
+  font-size: 96px;
+  line-height: 25px;
+}
+.txt2{
+  font-size: 72px;
+  line-height: 108px;
+}
+.txt3{
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 45px;
+}
+.spx{
+  color: #96C836;
+}
+.rect{
+  background: #96C836;
+  border-radius: 10px;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+  min-width: 30%;
+  color: #FDFDFF;
+  width: 30%; 
+}
+.watch1{
+  height: 45%;
+  width: auto;
+  margin-right: 2%;
+}
+.watch2{
+  height: 70%;
+  width:auto;
+}
+.footer{
+  position: relative;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  background-color: #2C2C2C;
+  color: #fff;
+  height: auto;
+  top: 0vw;
+  font-family: Poppins;
+  margin-left: auto;
+  margin-right: auto;
+}
+.footerbox1{
+  flex: 1;
+  font-family: Poppins;
+  margin-left: auto;
+  margin-right: auto;
+}
+.footerbox2{
+  flex: 2;
+  font-family: Poppins;
+  margin-left: auto;
+  margin-right: auto;
+}
+.link1{
+  text-decoration: none;
+  color: #8AC144 ;
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
+/*Header*/
+nav{
+  list-style-type: none;
+  position:static;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  padding-top: 1vh;
+  height: 10vh;
+  width: 100vw;
+}
+
+nav .bouton {
+  text-align: center;
+  display: inline-block;
+  margin-left: 1vw;
+  margin-right: 2vw;
+  align-items: center; 
+}
+
+.logo{
+    background-image: url(img/blank.png);
+    background-repeat:no-repeat;
+    background-size: contain;
+    width: 9%;
+    height: 100%
+}
+.span{
+    color: #8AC144 ;
+}
+.write{
+    line-height: 5vh;
+    font-family: Poppins;
+    padding-top: 2vh;
+}
+.bouton{
+  font-style: normal;
+font-weight: normal;
+font-size: 24px;
+align-content: center;
+line-height: 36px;
+text-align: center;
+color: #2C2C2C;
+background-color: transparent;
+padding: 0;
+border: none;
+}
+.barre{
+  height: 3px;
+  background-color: white;
+  background-size: cover;
+  width: 45vw;
+  margin-left: auto;
+  margin-right:auto;
+}
+.link2{
+  padding-left: 0.5vw;
+  padding-right: 00.5vw;
+}
