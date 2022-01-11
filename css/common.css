@@ -130,8 +130,7 @@ nav{
    .dropdown-content {
     display: none;
     position: absolute;
-    background-color: white;
-    min-width: 160px;
+    min-width: auto;
     z-index: 1;
   }
   
