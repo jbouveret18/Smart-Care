@@ -43,7 +43,7 @@
                 </span>
             
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="password" placeholder="your password.." required="required" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" title="Votre mot de passe doit contenir 8 caractères dont au moins une majuscule, un caractère spécial et un chiffre"><br>
+                <input type="password" id="password" name="password" placeholder="your password.." required="required" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" title="Your password must contain 8 characters including at least one uppercase, one special character and one number"><br>
 
                 <label for="password2">confirm your password:</label>
                 <span class="error">
