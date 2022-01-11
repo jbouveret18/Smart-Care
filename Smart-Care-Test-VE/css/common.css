@@ -1,0 +1,48 @@
+/*Header*/
+nav{
+    list-style-type: none;
+    position:static;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    padding-top: 1vh;
+    height: 10vh;
+    width: 100vw;
+  }
+  
+  nav .bouton {
+    text-align: center;
+    display: inline-block;
+    margin-left: 1vw;
+    margin-right: 2vw;
+    align-items: center; 
+  }
+  
+  .logo{
+      background-image: url(img/blank.png);
+      background-repeat:no-repeat;
+      background-size: contain;
+      width: 9%;
+      height: 100%
+  }
+  .span{
+      color: #8AC144 ;
+  }
+  .write{
+      line-height: 5vh;
+      font-family: Poppins;
+      padding-top: 2vh;
+  }
+  .bouton{
+    font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  align-content: center;
+  line-height: 36px;
+  text-align: center;
+  color: #2C2C2C;
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  }
+  
