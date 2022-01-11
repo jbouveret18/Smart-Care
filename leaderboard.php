@@ -23,6 +23,7 @@
         include 'php/navbar.php';
     ?>
     <div class='ranking'>
+        <span class='center'><h2>TOP 10</h2></span>
         <?php
         $servername = "localhost";
         $username = "root";
@@ -34,13 +35,6 @@
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
         }
-    $id=$_SESSION['id'];
-    $sqlscore= "SELECT nom,prenom,score FROM utilisateur WHERE id=$id";
-    $resultscore = $conn->query($sqlscore);   
-    if ($resultscore->num_rows > 0) {
-        $resultscore = mysqli_fetch_assoc($resultscore);
-        echo("$resultscore[nom] $resultscore[prenom], votre score est $resultscore[score]");
-    }
 
         //On va prendre le nom, prénom et le score des 100 utilisateur qui ont le plus grand score et les afficher
         //Le calcul du score reste à définir
@@ -50,6 +44,15 @@
         while($row = mysqli_fetch_assoc($result)) {
              echo("<div class='case'>$rank $row[nom] $row[prenom] <span class='alignedroite'>$row[score]</span></div>"); 
              $rank+=1;
+        }
+
+        echo("<span class='center'><h3>Vous</h3></span>");
+        $id=$_SESSION['id'];
+        $sqlscore= "SELECT nom,prenom,score FROM utilisateur WHERE id=$id";
+        $resultscore = $conn->query($sqlscore);   
+        if ($resultscore->num_rows > 0) {
+            $resultscore = mysqli_fetch_assoc($resultscore);
+            echo("<span class='center'><p>$resultscore[nom] $resultscore[prenom], votre score est $resultscore[score]</p></span>");
         }
         ?>
     </div>

@@ -38,14 +38,17 @@
     }
   ?>
 <div class="tab">
-  <button class="tablinks" onclick="openAction(event, 'general')" id="defaultOpen">Information Général</button>
+  <button class="tablinks" onclick="openAction(event, 'general')" id="defaultOpen">Informations générales</button>
   <button class="tablinks" onclick="openAction(event, 'changemdp')">Changer de mot de passe</button>
   <button class="tablinks" onclick="openAction(event, 'changemail')">Changer d'adresse mail</button>
 </div>
 
 <div id="general" class="tabcontent">
-  <h3>Information Général</h3>
-  <p>London is the capital city of England.</p>
+  <h3>Informations générales</h3>
+      Nom: <?php echo $_SESSION['nom']; ?> <br>
+      Prénom: <?php echo $_SESSION['prenom']; ?> <br><br>
+      Numéro d'objet: <?php echo $_SESSION['nobjet']; ?> <br><br>
+      Adresse mail actuelle: <?php echo $_SESSION['mail']; ?>
 </div>
 
 <div id="changemdp" class="tabcontent">

@@ -11,7 +11,7 @@
     }
     $passCheck = htmlspecialchars($_POST["password"], ENT_COMPAT,'ISO-8859-1', true);
     $mail = htmlspecialchars($_POST["mail"], ENT_COMPAT,'ISO-8859-1', true);
-    $sql= "SELECT Password,id,nom,prenom FROM utilisateur WHERE Mail='$mail';";
+    $sql= "SELECT Password,id,nom,numero_objet,prenom FROM utilisateur WHERE Mail='$mail';";
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
         $_passHash = mysqli_fetch_assoc($result);
@@ -21,6 +21,7 @@
             $_SESSION['mail'] = $mail;
             $_SESSION['id'] = $_passHash['id'];
             $_SESSION['nom'] = $_passHash['nom'];
+            $_SESSION['nobjet'] = $_passHash['numero_objet'];
             $_SESSION['prenom'] = $_passHash['prenom'];
             $conn->close();
             header('Location: ../index.php');
