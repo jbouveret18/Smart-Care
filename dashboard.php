@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,26 +20,40 @@
         include 'php/navbar.php';
     ?>
 
-    <div class="stats">
-        <div class="displaystat">
-            <p>Rythme cardiaque</p>
-            <img class="imgstat" src="img/cardiaque.png">
-        </div>
-        <div class="displaystat">
-            <p>Volume sonore</p>
-            <img class="imgstat" src="img/CO2.gif">
-        </div>
-        <div class="displaystat">
-            <p>Température corporelle</p>
-            <img class="imgstat" src="img/temperature.png">
-        </div>
-        <div class="displaystat">
-            <p>Quantité de gaz</p>
-            <img class="imgstat" src="img/son.jpg">
-        </div>
+    <div class="boite">
+    <div id="RC" class="tabcontent">
+        <h3>Rythme cardiaque</h3>
+        <p>Affichage du rythme cardiaque</p>
     </div>
-    <footer>
-        <p>©2021 SmartCare</p>
-    </footer>
+
+    <div id="Temperature" class="tabcontent">
+        <h3>Paris</h3>
+        <p>Affichage de la température corporelle</p>
+    </div>
+
+    <div id="Db" class="tabcontent">
+        <h3>Volume sonore</h3>
+        <p>Affichage du volume sonore</p>
+    </div>
+
+    <div id="Gaz" class="tabcontent">
+        <h3>Quantité de gaz</h3>
+        <p>Affichage de la quantité de gaz</p>
+    </div>
+
+    
+    <div class="tab">
+        <button class="tablinks" onclick="openTabs(event, 'RC')" id="defaultOpen">Rythme cardiaque</button>
+        <button class="tablinks" onclick="openTabs(event, 'Temperature')">Temperature corporelle</button>
+        <button class="tablinks" onclick="openTabs(event, 'Db')">Volume sonore</button>
+        <button class="tablinks" onclick="openTabs(event, 'Gaz')">Quantité de gaz</button>
+    </div>
+    </div>
+    
+    <script src=javascript/Tabs.js></script>
+
+    <?php
+        include 'php/footer.php';
+    ?>
 </body>
 </html>

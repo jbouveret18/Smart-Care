@@ -77,8 +77,8 @@
     
 
 
-    <footer>
-        <p>©2021 SmartCare</p>
-    </footer>
+    <?php
+        include 'php/footer.php';
+    ?>
 </body>
 </html>

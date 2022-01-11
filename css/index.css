@@ -3,6 +3,13 @@ html{
   scroll-behavior:smooth;
 }
 
+body{
+  font-family: 'Poppins', sans-serif;
+  background-color: #FDFDFF;
+  margin:0;
+  padding:0;
+}
+
 /*Gros titre de la montre*/
 h1{
     color: #96C836;
@@ -67,17 +74,6 @@ h3{
     grid-row:6/8
   }
 
-/*Footer*/
-footer{
-  position: relative;
-  margin-top: 20px;
-  display: flex;
-    justify-content: center;
-    width: 100%;
-  background-color: #2C2C2C;
-  color: #fff;
-}
-
 /*Elements centraux de la page d'accueil*/
 .middlemainflex{
   position: static;
@@ -141,32 +137,95 @@ footer{
   height: 70%;
   width:auto;
 }
-.footertxt1{
-font-style: normal;
-font-weight: 500;
-font-size: 24px;
-line-height: 16px;
-left: 0%;
+.footer{
+  position: relative;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  background-color: #2C2C2C;
+  color: #fff;
+  height: auto;
+  top: 0vw;
+  font-family: Poppins;
+  margin-left: auto;
+  margin-right: auto;
 }
-.footerdiv1{
-  position: absolute;
-left: 20%;
-right: 20%;
-bottom: 35%;
-height: 1px;
-background: #FDFDFF;
+.footerbox1{
+  flex: 1;
+  font-family: Poppins;
+  margin-left: auto;
+  margin-right: auto;
 }
-a{
-font-style: normal;
+.footerbox2{
+  flex: 2;
+  font-family: Poppins;
+  margin-left: auto;
+  margin-right: auto;
+}
+.link1{
+  text-decoration: none;
+  color: #8AC144 ;
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
+/*Header*/
+nav{
+  list-style-type: none;
+  position:static;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  padding-top: 1vh;
+  height: 10vh;
+  width: 100vw;
+}
+
+nav .bouton {
+  text-align: center;
+  display: inline-block;
+  margin-left: 1vw;
+  margin-right: 2vw;
+  align-items: center; 
+}
+
+.logo{
+    background-image: url(img/blank.png);
+    background-repeat:no-repeat;
+    background-size: contain;
+    width: 9%;
+    height: 100%
+}
+.span{
+    color: #8AC144 ;
+}
+.write{
+    line-height: 5vh;
+    font-family: Poppins;
+    padding-top: 2vh;
+}
+.bouton{
+  font-style: normal;
 font-weight: normal;
-font-size: 20px;
-line-height: 16px;
-color: #96C836;
-text-decoration: none;
+font-size: 24px;
+align-content: center;
+line-height: 36px;
+text-align: center;
+color: #2C2C2C;
+background-color: transparent;
+padding: 0;
+border: none;
 }
-.footerdiv2{
-  position: absolute;
-  bottom: 0%;
-  justify-content: space-between;
-  width: 60%;
+.barre{
+  height: 3px;
+  background-color: white;
+  background-size: cover;
+  width: 45vw;
+  margin-left: auto;
+  margin-right:auto;
+}
+.link2{
+  padding-left: 0.5vw;
+  padding-right: 00.5vw;
 }

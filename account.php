@@ -87,8 +87,11 @@
   </form>
 </div>
 
-<script src=javascript/tabs.js></script>
+<script src=javascript/verticalTabs.js></script>
 
     <a href='php/disconnect.php'><button class='bouton'><div class='write'>Disconnect</div></a>
 </body>
+<?php
+        include 'php/footer.php';
+    ?>
 </html>
