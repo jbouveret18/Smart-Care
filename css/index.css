@@ -3,13 +3,6 @@ html{
   scroll-behavior:smooth;
 }
 
-body{
-  font-family: 'Poppins', sans-serif;
-  background-color: #FDFDFF;
-  margin:0;
-  padding:0;
-}
-
 /*Gros titre de la montre*/
 h1{
     color: #96C836;
@@ -73,56 +66,6 @@ h3{
     grid-column: 1/3;
     grid-row:6/8
   }
-
-/*Header*/
-nav{
-  list-style-type: none;
-  position:static;
-  margin: 0;
-  padding: 0;
-  top: 0;
-  padding-top: 1%;
-  height: 10%;
-  width: 98vw;
-  white-space: nowrap;
-}
-
-
-nav .bouton {
-  text-align: center;
-  display: inline-block;
-  margin-left: 1%;
-  margin-right: 2%;
-  align-items: center; 
-}
-
-.logo{
-    background-image: url(img/blank.png);
-    background-repeat:no-repeat;
-    background-size: contain;
-    width: 9%;
-    height: 100%;
-}
-.span{
-    color: #8AC144 ;
-}
-.write{
-  line-height: 50px;
-  font-family: Poppins;
-  padding: 2%;
-}
-.bouton{
-  font-style: normal;
-font-weight: normal;
-font-size: 24px;
-align-content: center;
-line-height: 36px;
-text-align: center;
-color: #2C2C2C;
-background-color: transparent;
-padding: 0;
-border: none;
-}
 
 /*Footer*/
 footer{
@@ -197,4 +140,33 @@ footer{
 .watch2{
   height: 70%;
   width:auto;
+}
+.footertxt1{
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 16px;
+left: 0%;
+}
+.footerdiv1{
+  position: absolute;
+left: 20%;
+right: 20%;
+bottom: 35%;
+height: 1px;
+background: #FDFDFF;
+}
+a{
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 16px;
+color: #96C836;
+text-decoration: none;
+}
+.footerdiv2{
+  position: absolute;
+  bottom: 0%;
+  justify-content: space-between;
+  width: 60%;
 }

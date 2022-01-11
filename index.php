@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
+    <link rel='stylesheet' href='css/common.css'>
     <link rel="shortcut icon" href="img/blank.png" type="image/x-icon">
     <style>
         @import url('https://fonts.googleapis.com/css?family=Poppins');
@@ -13,29 +14,13 @@
 </head>
 <body>
 
-    <nav>
     <?php
-        session_start();
-        if (isset($_SESSION['connected']) && $_SESSION=true ) {
-            echo(" 
-            <a href='index.php'><button class='bouton' href='bottom.html' style='font-size: 50px;'><img src='img/blank.png' class='logo'>Smart<span class='span'>Care</span></button></a>
-            <a href='account.php'><button class='bouton' style='float: right'><div class='write'>Mon profil</div></button></a>
-            <a href='#'><button class='bouton' style='float: right'><div class='write'>Leaderboard</div></button></a>
-            <a href='#'><button class='bouton' style='float: right'><div class='write'>Dashboard</div></button></a>
-            ");
-        } else {
-        echo("
-        <a href='index.php'><button class='bouton' href='bottom.html' style='font-size: 50px;'><img src='img/blank.png' class='logo'>Smart<span class='span'>Care</span></button></a>
-        <a href='#'><button class='bouton' style='float: right'><div class='write'>Langues</div></button></a>
-        <a href='index.php#discover'><button class='bouton' style='float: right'><div class='write'>Découvrir</div></button></a>
-        <a href='login.php'><button class='bouton' href='#' style='float: right'><div class='write'>Connexion</div></button></a>
-        <a href='#'><button class='bouton' href='#' style='float: right'><div class='write'>Nous rejoindre</div></button></a>");}
-        ?>
-    </nav>
+        include 'php/navbar.php';
+    ?>
 
     <div class="middlemainflex">
     <div class="leftflex">
-        <div class="txt1">Ameliorer</div></br>
+        <div class="txt1">Améliorer</div></br>
         <div class="txt2">Votre <span class="spx">bien-être</span></div></br>
         <div class="txt3">Grâce à notre assistant bien-être et aux 5 capteurs présents sur notre montre connectée</div></br>
         <button class="rect" href="#">Nous rejoindre</button>
