@@ -40,8 +40,9 @@
     </form>
     </div>
     </div>
-    <?php
-        include 'php/footer.php';
-    ?>
+
+    <footer>
+        <p>©2021 SmartCare</p>
+    </footer>
 </body>
 </html>

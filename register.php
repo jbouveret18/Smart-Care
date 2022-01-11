@@ -18,7 +18,7 @@
         include 'php/navbar.php';
         
         if (isset($_GET['error']) && $_GET['error']==5){
-            echo("<span class='errorcenter'><p>Vous devez être connecté pour accéder au leaderboard</p></span>");
+            echo("<span class='errorcenter'><p>Compte crée avec succès</p></span>");
         }
         if (isset($_GET['error']) && $_GET['error']==6){
             echo("<span class='errorcenter'><p>Vous devez être connecté pour accéder au dashboard</p></span>");
@@ -74,6 +74,9 @@
           <input type="submit" value="S'inscrire">
         </form>
     </div>
+    
+
+
     <?php
         include 'php/footer.php';
     ?>
