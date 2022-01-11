@@ -1,14 +1,5 @@
 <?php
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "app";
-    // Create connection
-    $conn = new mysqli($servername, $username, $password, $dbname);
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
+    require  'connexion.php';
     $passCheck = htmlspecialchars($_POST["password"], ENT_COMPAT,'ISO-8859-1', true);
     $mail = htmlspecialchars($_POST["mail"], ENT_COMPAT,'ISO-8859-1', true);
     $sql= "SELECT Password,id,nom,numero_objet,prenom FROM utilisateur WHERE Mail='$mail';";

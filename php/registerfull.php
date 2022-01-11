@@ -1,22 +1,11 @@
 <?php
-
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "app";
-
+require  'connexion.php';
 $_mail = htmlspecialchars($_POST["mail"], ENT_COMPAT,'ISO-8859-1', true);
 $_pass1 = password_hash(htmlspecialchars($_POST["password"], ENT_COMPAT,'ISO-8859-1', true),PASSWORD_DEFAULT);
 $_pass2 = htmlspecialchars($_POST["password2"], ENT_COMPAT,'ISO-8859-1', true);
 $_nom = htmlspecialchars($_POST["nom"], ENT_COMPAT,'ISO-8859-1', true);
 $_prenom = htmlspecialchars($_POST["prenom"], ENT_COMPAT,'ISO-8859-1', true);
 $_nobjet =  htmlspecialchars($_POST["nobjet"], ENT_COMPAT,'ISO-8859-1', true);
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
 
 $sql = "SELECT Mail FROM utilisateur WHERE MAIL = '$_mail';";
 $result = $conn->query($sql);
