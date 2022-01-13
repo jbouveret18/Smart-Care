@@ -92,11 +92,15 @@ nav{
     padding-left: 1vw;
     padding-right: 1vw;
   }
+  .link1:first-child{
+    padding-left: 0;
+    padding-left: 0;
+  }
   .barre{
-    height: 3px;
+    height: 2px;
     background-color: white;
     background-size: cover;
-    width: 45vw;
+    width: 38vw;
     margin-left: auto;
     margin-right:auto;
   }

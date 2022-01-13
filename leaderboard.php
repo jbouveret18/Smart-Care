@@ -25,37 +25,31 @@
     <div class='ranking'>
         <span class='center'><h2>TOP 10</h2></span>
         <?php
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $dbname = "app";
-        // Create connection
-        $conn = new mysqli($servername, $username, $password, $dbname);
-        // Check connection
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
-
-        //On va prendre le nom, prénom et le score des 100 utilisateur qui ont le plus grand score et les afficher
-        //Le calcul du score reste à définir
-        $sql ='SELECT nom,prenom,score FROM utilisateur ORDER BY score DESC LIMIT 10;';
-        $result = $conn->query($sql);
-        $rank = 1;
-        while($row = mysqli_fetch_assoc($result)) {
-             echo("<div class='case'>$rank $row[nom] $row[prenom] <span class='alignedroite'>$row[score]</span></div>"); 
-             $rank+=1;
-        }
-
-        echo("<span class='center'><h3>Vous</h3></span>");
-        $id=$_SESSION['id'];
-        $sqlscore= "SELECT nom,prenom,score FROM utilisateur WHERE id=$id";
-        $resultscore = $conn->query($sqlscore);   
-        if ($resultscore->num_rows > 0) {
-            $resultscore = mysqli_fetch_assoc($resultscore);
-            echo("<span class='center'><p>$resultscore[nom] $resultscore[prenom], votre score est $resultscore[score]</p></span>");
-        }
+            include 'php/display/top10.php';
+        ?>
+        
+        <span class='center'><h3>Vous</h3></span>
+        <?php
+            include 'php/display/userscore.php';
         ?>
     </div>
+
+    <span class='center'><h4>Rechercher un utilisateur</h4></span>
+    <form action="leaderboard.php" method ="post">
+        <div class='center'>
+            <label for="searchnom">Nom:</label>
+            <input type="text" id="searchnom" name="searchnom" placeholder="Nom de l'utilisateur cherché.."><br>
+            
+            <label for="searchprenom">Prénom:</label>
+            <input type="text" id="searchprenom" name="searchprenom" placeholder="Prénom de l'utilisateur cherché..">
+        </div>
+        <div class='center'><input type="submit" value="Chercher"></div>
+    </form>
+    <?php
+        include 'php/display/searchuserscore.php';
+    ?>  
+    
+
     <?php
         include 'php/footer.php';
     ?>
