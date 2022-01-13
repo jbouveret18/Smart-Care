@@ -1,5 +1,5 @@
 <?php
-    include 'connexion.php';
+    require  'connexion.php';
     session_start();
     $_pass1 = password_hash(htmlspecialchars($_POST["password"], ENT_COMPAT,'ISO-8859-1', true),PASSWORD_DEFAULT);
     $_pass2 = htmlspecialchars($_POST["password2"], ENT_COMPAT,'ISO-8859-1', true);

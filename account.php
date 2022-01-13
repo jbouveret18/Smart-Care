@@ -22,21 +22,9 @@
 
     <br>
     <?php
-    if (isset($_GET["result"])) {
-      if ($_GET["result"] == 0) {
-          echo("<span class='error'><p>Mot de passe faux</p></span>  ");
-      }
-      if ($_GET["result"] == 1) {
-          echo("<span class='succes'><p>Mot de passe changé avec succès</p></span>");
-      }
-      if ($_GET["result"] == 2) {
-        echo("<span class='error'><p>L'adresse mail est déjà utilisé</p></span>");
-      }
-      if ($_GET["result"] == 3) {
-        echo("<span class='succes'><p>Adresse mail modifié avec succès</p></span>");
-      }
-    }
-  ?>
+     include 'php/display/errorAccount.php';
+    ?>
+
 <div class="tab">
   <button class="tablinks" onclick="openAction(event, 'general')" id="defaultOpen">Informations générales</button>
   <button class="tablinks" onclick="openAction(event, 'changemdp')">Changer de mot de passe</button>
@@ -71,18 +59,6 @@
   <input type="text" id="usermail" name="mail" placeholder="Votre nouvelle adresse mail.." pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required="required"><br>
   <label for="password">Mot de passe:</label>
   <input type="password" id="password" name="password" placeholder="Votre mot de passe..">
-  <span class="error">
-  <?php
-    if (isset($_GET["error"])) {
-      if ($_GET["error"] == 3) {
-        echo("Mauvaise adresse mail/Mot de passe faux<br><br>");
-      }
-      if ($_GET["error"] == 4) {
-        echo("Ce nom d'utilisateur n'existe pas<br><br>");
-      }
-    }
-  ?>
-  </span>
   <input type="submit" value="Se connecter">
   </form>
 </div>
