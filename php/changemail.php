@@ -16,19 +16,19 @@
             $resultmail = $conn->query($checkmail);
             if ($resultmail->num_rows > 0) {
                 //Adresse mail déjà utilisé
-                header('Location: ../account.php?result=2');
+                header("Location: $_SERVER[HTTP_REFERER]?result=2");
             } else {
                 $changemail = "UPDATE utilisateur SET Mail = '$mail' WHERE id =$_SESSION[id]";
                 if ($conn->query($changemail) === TRUE) {
                     $_SESSION['mail'] = $mail;
                     $achievemail = $conn->query($changemail);
                     $conn->close();
-                    header('Location: ../account.php?result=3');
+                    header("Location:  $_SERVER[HTTP_REFERER]?result=3");
                 } 
             }
         } else {
             //Mot de passe faux
-            header('Location: ../account.php?result=0');
+            header("Location:  $_SERVER[HTTP_REFERER]?result=0");
         }
     }
 ?>

@@ -19,11 +19,11 @@
             header('Location: ../index.php');
         } else {
             $conn->close();
-            header('Location: ../login.php?error=3');
+            header('Location:  $_SERVER[HTTP_REFERER]?error=3');
         }
     } else {
         $conn->close();
-        header('Location: ../login.php?error=4');
+        header('Location:  $_SERVER[HTTP_REFERER]?error=4');
     }
 
 ?>

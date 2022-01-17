@@ -12,7 +12,7 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     echo("<p>L'adresse mail existe déjà</p>");
-    header("Location: ../register.php?error=1");
+    header("Location:  $_SERVER[HTTP_REFERER]?error=1");
 } else {
     echo("<p>L'adresse mail n'existe pas</p>");
     if (password_verify($_pass2,$_pass1)){
@@ -24,9 +24,9 @@ if ($result->num_rows > 0) {
                     echo "Error: " . $sql . "<br>" . $conn->error;
                     }
                     $conn->close();
-        header('Location: ../register.php?error=5');
+        header('Location:  $_SERVER[HTTP_REFERER]?error=5');
     } else {
-        header('Location: ../register.php?error=2');
+        header('Location:  $_SERVER[HTTP_REFERER]?error=2');
     }
 }
 ?>

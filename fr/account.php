@@ -8,8 +8,8 @@
     <style>
         @import url('https://fonts.googleapis.com/css?family=Poppins');
     </style>
-    <link rel="stylesheet" href="css/account.css">
-    <link rel='stylesheet' href='css/common.css'>
+    <link rel="stylesheet" href="../css/account.css">
+    <link rel='stylesheet' href='../css/common.css'>
 </head>
 <body>
     <?php
@@ -17,18 +17,18 @@
         if (!isset($_SESSION['connected'])) {
             header('Location: login.php?error=7');
         }
-        include 'php/navbar.php';
+        include '../php/navbar.php';
     ?>
 
     <br>
     <?php
-     include 'php/display/errorAccount.php';
+     include '../php/display/errorAccount.php';
     ?>
 
 <div class="tab">
-  <button class="tablinks" onclick="openAction(event, 'general')" id="defaultOpen">Informations générales</button>
-  <button class="tablinks" onclick="openAction(event, 'changemdp')">Changer de mot de passe</button>
-  <button class="tablinks" onclick="openAction(event, 'changemail')">Changer d'adresse mail</button>
+  <button class="tablinks" onclick="openTabs(event, 'general')" id="defaultOpen">Informations générales</button>
+  <button class="tablinks" onclick="openTabs(event, 'changemdp')">Changer de mot de passe</button>
+  <button class="tablinks" onclick="openTabs(event, 'changemail')">Changer d'adresse mail</button>
 </div>
 
 <div id="general" class="tabcontent">
@@ -41,7 +41,7 @@
 
 <div id="changemdp" class="tabcontent">
   <h3>Changer de mot de passe</h3>
-  <form action="php/changemdp.php" method ="post">
+  <form action="../php/changemdp.php" method ="post">
     <label for="password">Nouveau mot de passe:</label>
     <input type="password" id="password" name="password" placeholder="Nouveau mot de passe.." required="required" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" title="Votre mot de passe doit contenir 8 caractères dont au moins une majuscule, un caractère spécial et un chiffre"><br>
 
@@ -54,7 +54,7 @@
 
 <div id="changemail" class="tabcontent">
   <h3>Changer d'adresse mail</h3>
-  <form action="php/changemail.php" method ="post">
+  <form action="../php/changemail.php" method ="post">
   <label for="usermail">Nouvelle adresse mail:</label>
   <input type="text" id="usermail" name="mail" placeholder="Votre nouvelle adresse mail.." pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required="required"><br>
   <label for="password">Mot de passe:</label>
@@ -63,11 +63,15 @@
   </form>
 </div>
 
-<script src=javascript/verticalTabs.js></script>
+<script src=../javascript/tabs.js></script>
 
-    <a href='php/disconnect.php'><button class='bouton'><div class='write'>Disconnect</div></a>
+    <a href='../php/disconnect.php'><button class='bouton'><div class='write'>Disconnect</div></a>
+
+    <button class="tablinks" onclick="redirect(event,'/en')">Redirection</button>
+
+    <script src=../javascript/translate.js></script>
 </body>
 <?php
-        include 'php/footer.php';
+        include 'footer.html';
     ?>
 </html>

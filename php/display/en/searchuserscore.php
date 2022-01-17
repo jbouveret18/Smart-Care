@@ -29,7 +29,7 @@
                     }
                 }
             } else {
-                echo("<span class='center'><p>Vous devez fournir au moins un nom ou un prénom.</p></span>");
+                echo("<span class='center'><p>You must provide at least a first or last name.</p></span>");
             }
         }
     }

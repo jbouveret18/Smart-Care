@@ -9,9 +9,9 @@
 
         if ($conn->query($sql) === TRUE) {
             $conn->close();
-            header('Location: ../account.php?result=1');
+            header("Location: $_SERVER[HTTP_REFERER]?result=1");
         } 
     } else {
-        header('Location: ../account.php?result=0');
+        header("Location: $_SERVER[HTTP_REFERER]?result=0");
     }
 ?>
