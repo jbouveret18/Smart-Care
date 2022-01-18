@@ -5,13 +5,15 @@
     $_pass2 = htmlspecialchars($_POST["password2"], ENT_COMPAT,'ISO-8859-1', true);
 
     if (password_verify($_pass2,$_pass1)){
-        $sql = "UPDATE utilisateur SET Password = '$_pass1' WHERE id =$_SESSION[id]";
 
-        if ($conn->query($sql) === TRUE) {
-            $conn->close();
-            header('Location: ../account.php?result=1');
+        $sql = $conn->prepare("UPDATE utilisateur SET Password = ? WHERE id = ?");
+        $sql->bind_param("si", $_pass1, $_SESSION['id']);
+
+        if ($sql->execute()) {
+            $result = $sql->get_result();
+            header("Location: $_SERVER[HTTP_REFERER]?result=1");
         } 
     } else {
-        header('Location: ../account.php?result=0');
+        header("Location: $_SERVER[HTTP_REFERER]?result=0");
     }
 ?>

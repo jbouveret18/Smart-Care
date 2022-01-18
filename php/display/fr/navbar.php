@@ -17,8 +17,8 @@
                     </div>
                 </div>
             <a href='account.php'><button class='bouton' style='float: right'><div class='write'>$_SESSION[nom] $_SESSION[prenom]</div></button></a>
-            <a href='leaderboard.php'><button class='bouton' style='float: right'><div class='write'>Leaderboard</div></button></a>
-            <a href='dashboard.php'><button class='bouton' style='float: right'><div class='write'>Dashboard</div></button></a></nav>
+            <a href='leaderboard.php'><button class='bouton' style='float: right'><div class='write'>Classement</div></button></a>
+            <a href='dashboard.php'><button class='bouton' style='float: right'><div class='write'>Statistiques</div></button></a></nav>
             <script src=../javascript/translate.js></script>
             ");
         } else {
@@ -37,5 +37,6 @@
         <a href='index.php#discover'><button class='bouton' style='float: right'><div class='write'>Découvrir</div></button></a>
         <a href='login.php'><button class='bouton' href='#' style='float: right'><div class='write'>Connexion</div></button></a>
         <a href='register.php'><button class='bouton' href='#' style='float: right'><div class='write'>Nous rejoindre</div></button></a></nav>
+        <script src=../javascript/translate.js></script>
         ");}
 ?>

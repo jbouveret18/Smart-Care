@@ -8,8 +8,8 @@
     <style>
         @import url('https://fonts.googleapis.com/css?family=Poppins');
     </style>
-    <link rel="stylesheet" href="css/dashboard.css">
-    <link rel='stylesheet' href='css/common.css'>
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel='stylesheet' href='../css/common.css'>
 </head>
 <body>
     <?php
@@ -17,7 +17,7 @@
         if (!isset($_SESSION['connected'])) {
             header('Location: login.php?error=6');
         }
-        include 'php/navbar.php';
+        include '../php/display/fr/navbar.php';
     ?>
 
     <div class="boite">
@@ -50,10 +50,10 @@
     </div>
     </div>
     
-    <script src=javascript/Tabs.js></script>
-
+    <script src=../javascript/Tabs.js></script>
+    
     <?php
-        include 'php/footer.php';
+        include 'footer.html';
     ?>
 </body>
 </html>

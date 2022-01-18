@@ -1,5 +1,5 @@
 <?php
-    require 'php/connexion.php';
+    require '../php/connexion.php';
     $id=$_SESSION['id'];
         $sqlscore= "SELECT ROW_NUMBER() OVER() AS rank,nom,prenom,score FROM utilisateur WHERE id=$id";
         $resultscore = $conn->query($sqlscore);   

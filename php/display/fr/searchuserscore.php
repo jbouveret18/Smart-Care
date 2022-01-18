@@ -1,5 +1,5 @@
 <?php
-    require 'php/connexion.php';
+    require '../php/connexion.php';
     if (isset($_POST['searchnom']) || isset($_POST['searchprenom']) ) {
         if ($_POST['searchnom']!='') {
             if ($_POST['searchprenom']!='') {

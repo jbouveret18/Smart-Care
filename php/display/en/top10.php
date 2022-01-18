@@ -1,5 +1,5 @@
 <?php
-    require 'php/connexion.php';
+    require '../php/connexion.php';
 
     //On va prendre le nom, prénom et le score des 100 utilisateur qui ont le plus grand score et les afficher
     //Le calcul du score reste à définir
