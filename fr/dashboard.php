@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Mon compte</title>
     <style>
         @import url('https://fonts.googleapis.com/css?family=Poppins');
@@ -22,8 +23,9 @@
 
     <div class="boite">
     <div id="RC" class="tabcontent">
-        <h3>Rythme cardiaque</h3>
-        <p>Affichage du rythme cardiaque</p>
+        <?php
+        include '../php/chart.php';
+    ?>
     </div>
 
     <div id="Temperature" class="tabcontent">
@@ -51,9 +53,11 @@
     </div>
     
     <script src=../javascript/Tabs.js></script>
-    
+    <script src=../javascript/chart.js></script>
+
     <?php
         include 'footer.html';
     ?>
+
 </body>
 </html>
