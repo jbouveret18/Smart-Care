@@ -17,7 +17,7 @@
         if (!isset($_SESSION['connected'])) {
             header('Location: login.php?error=6');
         }
-        include '../php/navbar.php';
+        include '../php/display/en/navbar.php';
     ?>
 
     <div class="boite">

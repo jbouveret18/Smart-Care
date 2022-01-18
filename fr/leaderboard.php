@@ -20,7 +20,7 @@
         if (!isset($_SESSION['connected'])) {
             header('Location: login.php?error=5');
         }
-        include '../php/navbar.php';
+        include '../php/display/fr/navbar.php';
     ?>
     <div class='ranking'>
         <span class='center'><h2>TOP 10</h2></span>

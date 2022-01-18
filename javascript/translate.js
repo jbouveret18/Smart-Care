@@ -5,3 +5,5 @@ function redirect(evt,targetLanguage) {
     document.write(targetUrl);
     location.replace(targetUrl);
 }
+
+document.getElementById("dropbtn").addEventListener("click", redirect);

@@ -13,8 +13,8 @@
 </head>
 <body>
 <?php
-        include '../php/navbar.php';
-    ?>
+        include '../php/display/en/navbar.php';
+        ?>
 <?php
         include 'footer.html';
     ?>

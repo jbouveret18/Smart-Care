@@ -15,7 +15,7 @@
 <body>
     
     <?php
-        include '../php/navbar.php';
+        include '../php/display/fr/navbar.php';
         
         if (isset($_GET['error']) && $_GET['error']==5){
             echo("<span class='errorcenter'><p>Vous devez être connecté pour accéder au leaderboard</p></span>");
