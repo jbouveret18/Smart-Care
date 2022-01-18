@@ -6,8 +6,10 @@
     $passCheck = htmlspecialchars($_POST["password"], ENT_COMPAT,'ISO-8859-1', true);
     $mail = htmlspecialchars($_POST["mail"], ENT_COMPAT,'ISO-8859-1', true);
 
-    $sql= "SELECT Password FROM utilisateur WHERE id=$_SESSION[id];";
-    $result = $conn->query($sql);
+    $sql = $conn->prepare("SELECT Password FROM utilisateur WHERE id=?;");
+    $sql->bind_param("i", $_SESSION['id']);
+    $sql->execute();
+    $result = $sql->get_result();
     if ($result->num_rows > 0) {
         $_passHash = mysqli_fetch_assoc($result);
         if (password_verify($passCheck,$_passHash['Password'])) {

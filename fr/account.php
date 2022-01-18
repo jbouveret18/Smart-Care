@@ -22,7 +22,7 @@
 
     <br>
     <?php
-     include '../php/display/errorAccount.php';
+     include '../php/display/fr/errorAccount.php';
     ?>
 
 <div class="tab">
@@ -66,10 +66,6 @@
 <script src=../javascript/tabs.js></script>
 
     <a href='../php/disconnect.php'><button class='bouton'><div class='write'>Disconnect</div></a>
-
-    <button class="tablinks" onclick="redirect(event,'/en')">Redirection</button>
-
-    <script src=../javascript/translate.js></script>
 </body>
 <?php
         include 'footer.html';
