@@ -1,24 +1,24 @@
-<div style="width: 60%; margin-left: auto; margin-right: auto; height: 60% ">
-    <canvas id="myChart"></canvas>
-</div>
-
 <?php
-    $con = new mysqli('localhost','root','','app');
-    $query = $con->query("SELECT `Valeur`,`Date` FROM `rc` ORDER BY `Date`");
+    require  'connexion.php';
+    $sqlprep = "SELECT `Valeur`,`Date` FROM $table ORDER BY Valeur";
+    $sql = $conn->prepare($sqlprep);
+    //$sql->bind_param("s", $table);
+    $sql->execute();
+    $result = $sql->get_result();
 
-    foreach($query as $data){
+    foreach($result as $data){
         $time[] = $data['Date'];
-        $bpm[] = $data['Valeur'];
+        $Value[] = $data['Valeur'];
     }
 ?>
 
-<script>
- const labels = <?php echo json_encode($time);?>;
+<script type='text/javascript'>
+const labels = <?php echo json_encode($time);?>;
 const data = {
   labels: labels,
   datasets: [{
-    label: 'Mon rythme cardiaque',
-    data: <?php echo json_encode($bpm);?>,
+    label: <?php echo json_encode($titregraphe);?>,
+    data: <?php echo json_encode($Value);?>,
     fill: false,
     borderColor: 'rgb(75, 192, 192)',
     tension: 0.1,
@@ -29,8 +29,12 @@ const config = {
     data: data,
   };
 
-  var myChart = new Chart(
-    document.getElementById('myChart'),
+    baseGraphid="";
+    actualGraphid = 'myChart';
+    targetGraphid=baseGraphid.concat(baseGraphid,actualGraphid,<?php echo json_encode($table);?>);
+  
+    var myChart = new Chart(
+    document.getElementById(targetGraphid),
     config
     );
 </script>

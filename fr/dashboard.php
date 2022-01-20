@@ -23,26 +23,48 @@
 
     <div class="boite">
     <div id="RC" class="tabcontent">
-        <?php
-        include '../php/chart.php';
-    ?>
+        <div style="width: 60%; margin-left: auto; margin-right: auto; height: 60% ">
+            <canvas id="myChartrc"></canvas>
+            <?php
+                $table="rc";
+                $titregraphe="Mon rythme cardiaque";
+                include '../php/chart.php';
+             ?>
+        </div>
     </div>
 
     <div id="Temperature" class="tabcontent">
-        <h3>Paris</h3>
-        <p>Affichage de la température corporelle</p>
+        <div style="width: 60%; margin-left: auto; margin-right: auto; height: 60% ">
+            <canvas id="myCharttemperature_corps"></canvas>
+            <?php
+                $table="temperature_corps";
+                $titregraphe="Temperature";
+                include '../php/chart.php';
+             ?>
+        </div>
     </div>
 
     <div id="Db" class="tabcontent">
-        <h3>Volume sonore</h3>
-        <p>Affichage du volume sonore</p>
+    <div style="width: 60%; margin-left: auto; margin-right: auto; height: 60% ">
+            <canvas id="myChartvolume"></canvas>
+            <?php
+                $table="volume";
+                $titregraphe="Volume sonore";
+                include '../php/chart.php';
+             ?>
+        </div>
     </div>
 
     <div id="Gaz" class="tabcontent">
-        <h3>Quantité de gaz</h3>
-        <p>Affichage de la quantité de gaz</p>
+        <div style="width: 60%; margin-left: auto; margin-right: auto; height: 60% ">
+            <canvas id="myChartgaz"></canvas>
+            <?php
+                $table="gaz";
+                $titregraphe="Volume de gaz";
+                include '../php/chart.php';
+             ?>
+        </div>
     </div>
-
     
     <div class="tab">
         <button class="tablinks" onclick="openTabs(event, 'RC')" id="defaultOpen">Rythme cardiaque</button>
