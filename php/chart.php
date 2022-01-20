@@ -1,6 +1,8 @@
 <?php
     require  'connexion.php';
-    $sqlprep = "SELECT `Valeur`,`Date` FROM $table ORDER BY Valeur";
+    unset($time);
+    unset($Value);
+    $sqlprep = "SELECT `Valeur`,`Date` FROM `$table` ORDER BY Date";
     $sql = $conn->prepare($sqlprep);
     //$sql->bind_param("s", $table);
     $sql->execute();
@@ -13,8 +15,8 @@
 ?>
 
 <script type='text/javascript'>
-const labels = <?php echo json_encode($time);?>;
-const data = {
+labels = <?php echo json_encode($time);?>;
+ data = {
   labels: labels,
   datasets: [{
     label: <?php echo json_encode($titregraphe);?>,
@@ -24,7 +26,7 @@ const data = {
     tension: 0.1,
   }]
 };
-const config = {
+ config = {
     type: 'line',
     data: data,
   };
@@ -37,4 +39,5 @@ const config = {
     document.getElementById(targetGraphid),
     config
     );
+
 </script>

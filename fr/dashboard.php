@@ -23,7 +23,7 @@
 
     <div class="boite">
     <div id="RC" class="tabcontent">
-        <div style="width: 60%; margin-left: auto; margin-right: auto; height: 60% ">
+        <div style="width: 50%; margin-left: auto; margin-right: auto; height: 60% ">
             <canvas id="myChartrc"></canvas>
             <?php
                 $table="rc";
@@ -34,7 +34,7 @@
     </div>
 
     <div id="Temperature" class="tabcontent">
-        <div style="width: 60%; margin-left: auto; margin-right: auto; height: 60% ">
+        <div style="width: 50%; margin-left: auto; margin-right: auto; height: 60% ">
             <canvas id="myCharttemperature_corps"></canvas>
             <?php
                 $table="temperature_corps";
@@ -45,7 +45,7 @@
     </div>
 
     <div id="Db" class="tabcontent">
-    <div style="width: 60%; margin-left: auto; margin-right: auto; height: 60% ">
+    <div style="width: 50%; margin-left: auto; margin-right: auto; height: 60% ">
             <canvas id="myChartvolume"></canvas>
             <?php
                 $table="volume";
@@ -56,7 +56,7 @@
     </div>
 
     <div id="Gaz" class="tabcontent">
-        <div style="width: 60%; margin-left: auto; margin-right: auto; height: 60% ">
+        <div style="width: 50%; margin-left: auto; margin-right: auto; height: 60% ">
             <canvas id="myChartgaz"></canvas>
             <?php
                 $table="gaz";
