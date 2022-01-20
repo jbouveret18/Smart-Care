@@ -38,6 +38,7 @@ footer{
 }
 
 .center{
+    display: block;
     text-align: center;
 }
 
@@ -65,4 +66,31 @@ h4{
     margin-top: 2vh;
     color: #8AC144;
     padding: 0;
+}
+.center2{
+    width:200px;
+    margin-left:36%;
+    text-align:center;
+}
+.center3{
+    margin-top:-41px;
+    width:200px;
+    margin-left:52%;
+    text-align:center;
+}
+.center4{
+    margin-top:0;
+    margin-left:3%;
+    text-align:center;
+}
+
+
+.research{
+width: 200px;
+margin-left:44%;
+margin-top: 1vh;
+text-align:center;
+border :solid 2px grey;
+padding: 0;
+
 }

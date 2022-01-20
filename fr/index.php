@@ -12,7 +12,7 @@
     <title>Accueil</title>
 </head>
 <body>
-
+<div class="all">
     <?php
         include '../php/display/fr/navbar.php';
         ?>
@@ -61,6 +61,7 @@
         <div class="sept"> 
         </div>
       </div>
+</div>
       <footer class="footer">
         <div class="footerbox1">@2022 SmartCare</div>
         <div class="barre"></div>

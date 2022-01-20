@@ -42,14 +42,18 @@
 <div id="changemdp" class="tabcontent">
   <h3>Changer de mot de passe</h3>
   <form action="../php/changemdp.php" method ="post">
-    <label for="password">Nouveau mot de passe:</label>
+    <div id="estetic" class="estetic"
+      label for="password">Nouveau mot de passe:</label>
     <input type="password" id="password" name="password" placeholder="Nouveau mot de passe.." required="required" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" title="Votre mot de passe doit contenir 8 caractères dont au moins une majuscule, un caractère spécial et un chiffre"><br>
-
     <label for="password2">Confirmez votre mot de passe:</label>
     <input type="password" id="password2" name="password2" placeholder="Confirmez votre mot de passe.." required="required" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" title="Votre mot de passe doit contenir 8 caractères dont au moins une majuscule, un caractère spécial et un chiffre"><br>
-
-    <input type="submit" value="Changer de mot de passe">
+    </div>
   </form>
+  <div id="lastbutton" class="lastbutton">
+<h4>
+    <input type="submit" value="Changer de mot de passe"></h4>
+  </form>
+</div>
 </div>
 
 <div id="changemail" class="tabcontent">
@@ -59,15 +63,16 @@
   <input type="text" id="usermail" name="mail" placeholder="Votre nouvelle adresse mail.." pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required="required"><br>
   <label for="password">Mot de passe:</label>
   <input type="password" id="password" name="password" placeholder="Votre mot de passe..">
-  <input type="submit" value="Se connecter">
+  <h4>
+  <input type="submit" value="changer d'adresse email"></h4>
   </form>
 </div>
 
 <script src=../javascript/tabs.js></script>
 
-    <a href='../php/disconnect.php'><button class='bouton'><div class='write'>Disconnect</div></a>
-
-    <button class="tablinks" onclick="redirect(event,'/en')">Redirection</button>
+    <a href='../php/disconnect.php'>
+    <input type=submit  class="disconnect" value="se déconnecter">
+  </a>
 
     <script src=../javascript/translate.js></script>
 </body>
