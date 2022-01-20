@@ -58,3 +58,109 @@ nav{
     margin:0;
     padding:0;
 }
+  /*Footer*/
+  footer{
+    position: absolute;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    background-color: #2C2C2C;
+    color: #fff;
+    height: auto;
+    bottom: 0vw;
+    font-family: Poppins;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .footerbox1{
+    flex: 1;
+    font-family: Poppins;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .footerbox2{
+    flex: 2;
+    font-family: Poppins;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .link1{
+    text-decoration: none;
+    color: #8AC144 ;
+    padding-left: 1vw;
+    padding-right: 1vw;
+  }
+  .link1:first-child{
+    padding-left: 0;
+    padding-left: 0;
+  }
+  .barre{
+    height: 2px;
+    background-color: white;
+    background-size: cover;
+    width: 38vw;
+    margin-left: auto;
+    margin-right:auto;
+  }
+  .link2{
+    padding-left: 0.5vw;
+    padding-right: 00.5vw;
+  }
+  .dropbtn {
+    font-style: normal;
+    font-weight: normal;
+    font-size: calc(15px + 0.75vw);
+    align-content: center;
+    line-height: 36px;
+    text-align: center;
+    color: #2C2C2C;
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    }
+  
+  .dropdown {
+    float: right;
+    text-align: center;
+    display: inline-block;
+    margin-left: 1vw;
+    margin-right: 2vw;
+    align-items: center;
+    padding-top: 2vh;
+
+  }
+   .dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: auto;
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding-top: 0.4vh;
+    text-decoration: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    float: left;
+  }
+  
+  .dropdown-content a:hover {background-color: white;border-radius: 10px;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {border-radius: 10px;}
+
+  .flag{
+    width: 4vw;
+    height: 5vh;
+    min-width: 50px;
+    min-height: 50px;
+    border-radius: 10px;
+    border-width: 3px;
+    border-color: #8AC144 ;
+  }
+  
