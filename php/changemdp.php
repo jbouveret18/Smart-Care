@@ -4,6 +4,12 @@
     $_pass1 = password_hash(htmlspecialchars($_POST["password"], ENT_COMPAT,'ISO-8859-1', true),PASSWORD_DEFAULT);
     $_pass2 = htmlspecialchars($_POST["password2"], ENT_COMPAT,'ISO-8859-1', true);
 
+    $redirectUrl = $_SERVER['HTTP_REFERER'];
+    $matches= preg_match("/(result)/", $redirectUrl);
+    if ($matches==1) {
+        $redirectUrl = substr($redirectUrl, 0, -9);
+    }
+
     if (password_verify($_pass2,$_pass1)){
 
         $sql = $conn->prepare("UPDATE utilisateur SET Password = ? WHERE id = ?");
@@ -11,9 +17,9 @@
 
         if ($sql->execute()) {
             $result = $sql->get_result();
-            header("Location: $_SERVER[HTTP_REFERER]?result=1");
+            header("Location: $redirectUrl?result=1");
         } 
     } else {
-        header("Location: $_SERVER[HTTP_REFERER]?result=0");
+        header("Location: $redirectUrl?result=0");
     }
 ?>
