@@ -66,10 +66,6 @@
 <script src=../javascript/tabs.js></script>
 
     <a href='../php/disconnect.php'><button class='bouton'><div class='write'>Disconnect</div></a>
-
-    <button class="tablinks" onclick="redirect(event,'/fr')">French</button>
-
-    <script src=../javascript/translate.js></script>
 </body>
 <?php
         include 'footer.html';

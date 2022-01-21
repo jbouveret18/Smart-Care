@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/blank.png" type="image/x-icon">
     <title>Mon compte</title>
     <style>
         @import url('https://fonts.googleapis.com/css?family=Poppins');
@@ -22,7 +23,7 @@
 
     <br>
     <?php
-     include '../php/display/errorAccount.php';
+     include '../php/display/fr/errorAccount.php';
     ?>
 
 <div class="tab">
@@ -74,7 +75,6 @@
     <input type=submit  class="disconnect" value="se déconnecter">
   </a>
 
-    <script src=../javascript/translate.js></script>
 </body>
 <?php
         include 'footer.html';

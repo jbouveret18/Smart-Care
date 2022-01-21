@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/blank.png" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Mon compte</title>
     <style>
         @import url('https://fonts.googleapis.com/css?family=Poppins');
@@ -22,25 +24,48 @@
 
     <div class="boite">
     <div id="RC" class="tabcontent">
-        <h3>Rythme cardiaque</h3>
-        <p>Affichage du rythme cardiaque</p>
+        <div style="width: 50%; margin-left: auto; margin-right: auto; height: 60% ">
+            <canvas id="myChartrc"></canvas>
+            <?php
+                $table="rc";
+                $titregraphe="Mon rythme cardiaque";
+                include '../php/chart.php';
+             ?>
+        </div>
     </div>
 
     <div id="Temperature" class="tabcontent">
-        <h3>Paris</h3>
-        <p>Affichage de la température corporelle</p>
+        <div style="width: 50%; margin-left: auto; margin-right: auto; height: 60% ">
+            <canvas id="myCharttemperature_corps"></canvas>
+            <?php
+                $table="temperature_corps";
+                $titregraphe="Temperature";
+                include '../php/chart.php';
+             ?>
+        </div>
     </div>
 
     <div id="Db" class="tabcontent">
-        <h3>Volume sonore</h3>
-        <p>Affichage du volume sonore</p>
+    <div style="width: 50%; margin-left: auto; margin-right: auto; height: 60% ">
+            <canvas id="myChartvolume"></canvas>
+            <?php
+                $table="volume";
+                $titregraphe="Volume sonore";
+                include '../php/chart.php';
+             ?>
+        </div>
     </div>
 
     <div id="Gaz" class="tabcontent">
-        <h3>Quantité de gaz</h3>
-        <p>Affichage de la quantité de gaz</p>
+        <div style="width: 50%; margin-left: auto; margin-right: auto; height: 60% ">
+            <canvas id="myChartgaz"></canvas>
+            <?php
+                $table="gaz";
+                $titregraphe="Volume de gaz";
+                include '../php/chart.php';
+             ?>
+        </div>
     </div>
-
     
     <div class="tab">
         <button class="tablinks" onclick="openTabs(event, 'RC')" id="defaultOpen">Rythme cardiaque</button>
@@ -51,9 +76,11 @@
     </div>
     
     <script src=../javascript/Tabs.js></script>
-    
+    <script src=../javascript/chart.js></script>
+
     <?php
         include 'footer.html';
     ?>
+
 </body>
 </html>

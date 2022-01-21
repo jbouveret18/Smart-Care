@@ -29,7 +29,7 @@
     ?>
     <div class="form">
         <div class="login">
-            <h2>Connexion</h2>
+            <h2>Login</h2>
             <form action="../php/loginform.php" method ="post">
                 <label for="usermail">E-mail address:</label>
                 <input type="text" id="usermail" name="mail" placeholder="Your e-mail.." pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required="required"><br>
