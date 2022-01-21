@@ -7,7 +7,7 @@
                 $resultuser = $conn->query($sql);
                 if ($resultuser->num_rows > 0) {
                     while($row = mysqli_fetch_assoc($resultuser)) {
-                        echo("<span class='center'><p>$row[rank] $row[nom] $row[prenom] $row[score]</p></span>"); 
+                        echo("<div class='dsbox'><p>$row[rank] $row[nom] $row[prenom] $row[score]</p></div>"); 
                     }
                 }
             } else {
@@ -15,7 +15,7 @@
                 $resultuser = $conn->query($sql);
                 if ($resultuser->num_rows > 0) {
                     while($row = mysqli_fetch_assoc($resultuser)) {
-                        echo("<span class='center'><p>$row[rank] $row[nom] $row[prenom] $row[score]</p></span>"); 
+                        echo("<div class='dsbox'><p>$row[rank] $row[nom] $row[prenom] $row[score]</p></div>"); 
                     }
                 }   
             }
@@ -25,7 +25,7 @@
                 $resultuser = $conn->query($sql);
                 if ($resultuser->num_rows > 0) {
                     while($row = mysqli_fetch_assoc($resultuser)) {
-                        echo("<span class='center'><p>$row[rank] $row[nom] $row[prenom] $row[score]</p></span>"); 
+                        echo("<div class='dsbox'><p>$row[rank] $row[nom] $row[prenom] $row[score]</p></div>"); 
                     }
                 }
             } else {

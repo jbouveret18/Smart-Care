@@ -66,9 +66,9 @@
 
 <script src=../javascript/tabs.js></script>
 
-    <a href='../php/disconnect.php'><button class='bouton'><div class='write'>Disconnect</div></a>
-</body>
-<?php
+    <a href='../php/disconnect.php'><div class='write'>Disconnect</div></a>
+    <?php
         include 'footer.html';
     ?>
+</body>
 </html>

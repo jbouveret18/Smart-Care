@@ -29,7 +29,7 @@
             include '../php/display/fr/top10.php';
         ?>
         
-        <span class='center'><h3>Vous</h3></span>
+        <span style="text-align : center"><h3>Vous</h3></span>
         <?php
             include '../php/display/fr/userscore.php';
         ?>
@@ -38,13 +38,13 @@
     <span class='center'><h4>Rechercher un utilisateur</h4></span>
     <form action="leaderboard.php" method ="post">
         <div class='center'>
-            <label for="searchnom">Nom:</label>
-            <input type="text" id="searchnom" name="searchnom" placeholder="Nom de l'utilisateur cherché.."><br>
+            <label for="searchnom" class="pad1">Nom:</label>
+            <input type="text" id="searchnom" name="searchnom" placeholder="Nom de l'utilisateur cherché.." class="center2">
             
-            <label for="searchprenom">Prénom:</label>
-            <input type="text" id="searchprenom" name="searchprenom" placeholder="Prénom de l'utilisateur cherché..">
+            <label for="searchprenom" class="pad1">Prénom:</label>
+            <input type="text" id="searchprenom" name="searchprenom" placeholder="Prénom de l'utilisateur cherché.." class="center2">
         </div>
-        <div class='center'><input type="submit" value="Chercher"></div>
+        <div class='center3'><input type="submit" value="Chercher"></div>
     </form>
     <?php
         include '../php/display/fr/searchuserscore.php';
