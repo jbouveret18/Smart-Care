@@ -12,6 +12,13 @@ $sql->bind_param("s", $_mail);
 $sql->execute();
 $result = $sql->get_result();
 
+$redirectUrl = $_SERVER['HTTP_REFERER'];
+$matches= preg_match("/(error)/", $redirectUrl);
+if ($matches==1) {
+    $redirectUrl = substr($redirectUrl, 0, -8);
+}
+
+
 if ($result->num_rows > 0) {
     echo("<p>L'adresse mail existe déjà</p>");
     header("Location:  $_SERVER[HTTP_REFERER]?error=1");
@@ -26,9 +33,9 @@ if ($result->num_rows > 0) {
                     echo "Error: " . $sql . "<br>" . $conn->error;
                     }
                     $conn->close();
-        header("Location:  $_SERVER[HTTP_REFERER]?error=5");
+        header("Location:  $redirectUrl?error=5");
     } else {
-        header("Location:  $_SERVER[HTTP_REFERER]?error=2");
+        header("Location:  $redirectUrl?error=2");
     }
 }
 ?>
