@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/blank.png" type="image/x-icon">
     <title>Mon compte</title>
     <style>
         @import url('https://fonts.googleapis.com/css?family=Poppins');
@@ -65,7 +66,7 @@
 
 <script src=../javascript/tabs.js></script>
 
-    <a href='../php/disconnect.php'><button class='bouton'><div class='write'>Disconnect</div></a>
+    <a href='../php/disconnect.php' class="disconnect"><div class='write'>Disconnect</div></a>
 </body>
 <?php
         include 'footer.html';

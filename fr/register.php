@@ -29,7 +29,13 @@
         <form action="../php/registerfull.php" method ="post">
         <div class="login">
             
+                <label for="prenom">Prénom:</label>
+                <input type="text" id="prenom" name="prenom" placeholder="Votre prenom.." required="required"><br>
+                
             
+                <label for="password">Mot de passe:</label>
+                <input type="password" id="password" name="password" placeholder="Votre mot de passe.." required="required" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" title="Votre mot de passe doit contenir 8 caractères dont au moins une majuscule, un caractère spécial et un chiffre"><br>
+
                 <label for="usermail">Adresse mail:</label>
                 <input type="text" id="usermail" name="mail" placeholder="Votre mail.." pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required="required"><br>
                 <span class="error">
@@ -41,9 +47,13 @@
                 }
                 ?>
                 </span>
-            
-                <label for="password">Mot de passe:</label>
-                <input type="password" id="password" name="password" placeholder="Votre mot de passe.." required="required" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" title="Votre mot de passe doit contenir 8 caractères dont au moins une majuscule, un caractère spécial et un chiffre"><br>
+          </div>
+
+          <div class="login">
+                
+                <label for="nom">Nom:</label>
+
+                <input type="text" id="nom" name="nom" placeholder="Votre nom.." required="required"><br>
 
                 <label for="password2">Confirmez votre mot de passe:</label>
                 <span class="error">
@@ -56,16 +66,7 @@
                 ?>
                 </span>
                 <input type="password" id="password2" name="password2" placeholder="Confirmez votre mot de passe.." required="required"><br>
-            
-          </div>
-
-          <div class="login">
-                <label for="nom">Nom:</label>
-
-                <input type="text" id="nom" name="nom" placeholder="Votre nom.." required="required"><br>
-
-                <label for="prenom">Prénom:</label>
-                <input type="text" id="prenom" name="prenom" placeholder="Votre prenom.." required="required"><br>
+                
                 
                 <label for="nobjet">Votre numéro d'objet:</label>
                 <input type="text" id="nobjet" name="nobjet" placeholder="Votre numéro d'objet.." required="required"><br>

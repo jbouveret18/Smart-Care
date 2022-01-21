@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/blank.png" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Mon compte</title>
     <style>
@@ -23,7 +24,7 @@
 
     <div class="boite">
     <div id="RC" class="tabcontent">
-        <div style="width: 50%; margin-left: auto; margin-right: auto; height: 60% ">
+        <div class="Canvas">
             <canvas id="myChartrc"></canvas>
             <?php
                 $table="rc";
@@ -34,7 +35,7 @@
     </div>
 
     <div id="Temperature" class="tabcontent">
-        <div style="width: 50%; margin-left: auto; margin-right: auto; height: 60% ">
+        <div  class="Canvas">
             <canvas id="myCharttemperature_corps"></canvas>
             <?php
                 $table="temperature_corps";
@@ -45,7 +46,7 @@
     </div>
 
     <div id="Db" class="tabcontent">
-    <div style="width: 50%; margin-left: auto; margin-right: auto; height: 60% ">
+    <div  class="Canvas">
             <canvas id="myChartvolume"></canvas>
             <?php
                 $table="volume";
@@ -56,7 +57,7 @@
     </div>
 
     <div id="Gaz" class="tabcontent">
-        <div style="width: 50%; margin-left: auto; margin-right: auto; height: 60% ">
+        <div  class="Canvas">
             <canvas id="myChartgaz"></canvas>
             <?php
                 $table="gaz";
@@ -67,10 +68,10 @@
     </div>
     
     <div class="tab">
-        <button class="tablinks" onclick="openTabs(event, 'RC')" id="defaultOpen">Rythme cardiaque</button>
-        <button class="tablinks" onclick="openTabs(event, 'Temperature')">Temperature corporelle</button>
-        <button class="tablinks" onclick="openTabs(event, 'Db')">Volume sonore</button>
-        <button class="tablinks" onclick="openTabs(event, 'Gaz')">Quantité de gaz</button>
+        <button class="tablinks" onclick="openTabs(event, 'RC')" id="defaultOpen"><span class="tabTitle">Rythme cardiaque</span><img class="logoDash" src="../img/heartbeat.svg"></button>
+        <button class="tablinks" onclick="openTabs(event, 'Temperature')"><span class="tabTitle">Temperature corporelle</span><img class="logoDash" src="../img/thermos.svg"></button>
+        <button class="tablinks" onclick="openTabs(event, 'Db')"><span class="tabTitle">Volume sonore<img class="logoDash" src="../img/sound.svg"></span></button>
+        <button class="tablinks" onclick="openTabs(event, 'Gaz')"><span class="tabTitle">Quantité de gaz</span><img class="logoDash" src="../img/co2.svg"></button>
     </div>
     </div>
     
