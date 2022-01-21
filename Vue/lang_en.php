@@ -45,6 +45,7 @@ define("_NobjectHolder", "Your object number..");
 define("_Register2", "Register");
 define("_RegisterError2", "Please enter two identical passwords");
 define("_RegisterError1", "This email address is already in use");
+define("_RegisterError5", "<span class='errorcenter'><p>Account successfully created</p></span>");
 
 //Login
 define("_Connect", "Login");
@@ -83,6 +84,10 @@ define("_ScorePerso2", " and you are number ");
 define("_SearchName", "Name of the searched user..");
 define("_SearchFirstName", "First name of searched user..");
 define("_Search", "Search");
-define("_SearchUser", "Search user");
+define("_SearchUser", "Search an user");
 
+//Nom des pages
+define("_TitleAccount", "Account");
+define("_TitleIndex", "Welcome");
+define("_TitleRegister", "Register");
 ?>

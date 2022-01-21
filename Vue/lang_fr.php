@@ -46,6 +46,8 @@ define("_NobjectHolder", "Votre numéro d'objet..");
 define("_Register2", "S'inscrire");
 define("_RegisterError2", "Veuillez saisir deux mots de passe identiques");
 define("_RegisterError1", "Cette adresse mail est déjà utilisée");
+define("_RegisterError5", "<span class='errorcenter'><p>Compte crée avec succès</p></span>");
+define("_RegisterError6", "Veuillez saisir deux mots de passe identiques");
 
 //Login
 define("_Connect", "Se connecter");
@@ -86,4 +88,9 @@ define("_SearchName", "Nom de l'utilisateur cherché..");
 define("_SearchFirstName", "Prénom de l'utilisateur cherché..");
 define("_Search", "Chercher");
 define("_SearchUser", "Rechercher un utilisateur");
+
+//Nom des pages
+define("_TitleAccount", "Mon compte");
+define("_TitleIndex", "Accueil");
+define("_TitleRegister", "Créer un compte");
 ?>

@@ -3,7 +3,7 @@
     if (isset($_POST['searchnom']) || isset($_POST['searchprenom']) ) {
         if ($_POST['searchnom']!='') {
             if ($_POST['searchprenom']!='') {
-                $sql = "SELECT ROW_NUMBER() OVER() AS rank,nom,prenom,score FROM utilisateur WHERE nom='$_POST[searchnom]' AND prenom='$_POST[searchprenom]' LIMIT 10 ORDER BY score DESC;";
+                $sql = "SELECT ROW_NUMBER() OVER() AS rank,nom,prenom,score FROM utilisateur WHERE nom='$_POST[searchnom]' AND prenom='$_POST[searchprenom]' ORDER BY score DESC LIMIT 10 ;";
                 $resultuser = $conn->query($sql);
                 if ($resultuser->num_rows > 0) {
                     while($row = mysqli_fetch_assoc($resultuser)) {
@@ -11,7 +11,7 @@
                     }
                 }
             } else {
-                $sql = "SELECT ROW_NUMBER() OVER() AS rank,nom,prenom,score FROM utilisateur WHERE nom='$_POST[searchnom]' LIMIT 10 ORDER BY score DESC;";
+                $sql = "SELECT ROW_NUMBER() OVER() AS rank,nom,prenom,score FROM utilisateur WHERE nom='$_POST[searchnom]' ORDER BY score DESC LIMIT 10 ;";
                 $resultuser = $conn->query($sql);
                 if ($resultuser->num_rows > 0) {
                     while($row = mysqli_fetch_assoc($resultuser)) {
@@ -21,7 +21,7 @@
             }
         } else {
             if ($_POST['searchprenom']!='') {
-                $sql = "SELECT ROW_NUMBER() OVER() AS rank,nom,prenom,score FROM utilisateur WHERE prenom='$_POST[searchprenom]' LIMIT 10 ORDER BY score DESC;";
+                $sql = "SELECT ROW_NUMBER() OVER() AS rank,nom,prenom,score FROM utilisateur WHERE prenom='$_POST[searchprenom]' ORDER BY score DESC LIMIT 10 ;";
                 $resultuser = $conn->query($sql);
                 if ($resultuser->num_rows > 0) {
                     while($row = mysqli_fetch_assoc($resultuser)) {

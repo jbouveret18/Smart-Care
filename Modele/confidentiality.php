@@ -18,7 +18,7 @@ include_once "../php/translate.php";
     <style>
         @import url('https://fonts.googleapis.com/css?family=Poppins');
     </style>
-    <title>Document</title>
+    <title><?= _Confidentiality ?></title>
 </head>
 <body>
 <?php

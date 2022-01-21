@@ -14,7 +14,7 @@ include_once "../php/translate.php";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="shortcut icon" href="../img/blank.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leaderboard</title>
+    <title><?= _Ranking ?></title>
     <style>
         @import url('https://fonts.googleapis.com/css?family=Poppins');
     </style>

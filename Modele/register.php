@@ -18,7 +18,7 @@ include_once "../php/translate.php";
     <style>
         @import url('https://fonts.googleapis.com/css?family=Poppins');
     </style>
-    <title>S'inscrire</title>
+    <title><?= _TitleRegister ?></title>
 </head>
 <body>
     
@@ -26,10 +26,7 @@ include_once "../php/translate.php";
         include '../php/navbar.php';
         
         if (isset($_GET['error']) && $_GET['error']==5){
-            echo("<span class='errorcenter'><p>Compte crée avec succès</p></span>");
-        }
-        if (isset($_GET['error']) && $_GET['error']==6){
-            echo("<span class='errorcenter'><p>Vous devez être connecté pour accéder au dashboard</p></span>");
+            echo(''._RegisterError5);
         }
     ?>
     <h2><?= _Register ?></h2>

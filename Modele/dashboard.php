@@ -15,7 +15,7 @@ include_once "../php/translate.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../img/blank.png" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <title>Mon compte</title>
+    <title><?= _Dashboard ?></title>
     <style>
         @import url('https://fonts.googleapis.com/css?family=Poppins');
     </style>
