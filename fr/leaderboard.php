@@ -37,22 +37,26 @@
 
     <span class='center'><h4>Rechercher un utilisateur</h4></span>
     <form action="leaderboard.php" method ="post">
-        <div class='center'>
-            <label for="searchnom">Nom:</label>
-            <input type="text" id="searchnom" name="searchnom" placeholder="Nom de l'utilisateur cherché.."><br>
-            
-            <label for="searchprenom">Prénom:</label>
-            <input type="text" id="searchprenom" name="searchprenom" placeholder="Prénom de l'utilisateur cherché..">
+              <h5>  <div class="center2">
+                    <label for="searchnom">Nom:</label>
+                    <input type="text" id="searchnom" name="searchnom" placeholder="Nom de l'utilisateur cherché.."><br>
+                </div>
+                <div class="center3">
+                    <label for="searchprenom">Prénom:</label>
+                    <input type="text" id="searchprenom" name="searchprenom" placeholder="Prénom de l'utilisateur cherché..">
+                </div></h5>
+        <div class='center4'>
+            <input type="submit" value="Chercher">
         </div>
-        <div class='center'><input type="submit" value="Chercher"></div>
     </form>
-    <?php
+    <div class="research">
+        <?php
         include '../php/display/fr/searchuserscore.php';
-    ?>  
-    
-
+        ?>  
+    </div>
+<h6>
     <?php
         include 'footer.html';
-    ?>
+    ?></h6>
 </body>
 </html>
