@@ -8,6 +8,12 @@
     $sql->execute();
     $result = $sql->get_result();
 
+    $redirectUrl = $_SERVER['HTTP_REFERER'];
+    $matches= preg_match("/(error)/", $redirectUrl);
+    if ($matches==1) {
+        $redirectUrl = substr($redirectUrl, 0, -8);
+    }
+
     if ($result->num_rows > 0) {
         $_passHash = mysqli_fetch_assoc($result);
         if (password_verify($passCheck,$_passHash['Password'])) {
@@ -23,11 +29,11 @@
             header("Location: ../index.php");
         } else {
             $conn->close();
-            header("Location:  $_SERVER[HTTP_REFERER]?error=3");
+            header("Location:  $redirectUrl?error=3");
         }
     } else {
         $conn->close();
-        header("Location:  $_SERVER[HTTP_REFERER]?error=4");
+        header("Location:  $redirectUrl?error=4");
     }
 
 ?>

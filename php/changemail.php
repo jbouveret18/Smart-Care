@@ -1,6 +1,12 @@
 <?php
     session_start();
 
+    $redirectUrl = $_SERVER['HTTP_REFERER'];
+    $matches= preg_match("/(result)/", $redirectUrl);
+    if ($matches==1) {
+        $redirectUrl = substr($redirectUrl, 0, -9);
+    }
+
     require  'connexion.php';
 
     $passCheck = htmlspecialchars($_POST["password"], ENT_COMPAT,'ISO-8859-1', true);
@@ -18,19 +24,19 @@
             $resultmail = $conn->query($checkmail);
             if ($resultmail->num_rows > 0) {
                 //Adresse mail déjà utilisé
-                header("Location: $_SERVER[HTTP_REFERER]?result=2");
+                header("Location: $redirectUrl?result=2");
             } else {
                 $changemail = "UPDATE utilisateur SET Mail = '$mail' WHERE id =$_SESSION[id]";
                 if ($conn->query($changemail) === TRUE) {
                     $_SESSION['mail'] = $mail;
                     $achievemail = $conn->query($changemail);
                     $conn->close();
-                    header("Location:  $_SERVER[HTTP_REFERER]?result=3");
+                    header("Location:  $redirectUrl?result=3");
                 } 
             }
         } else {
             //Mot de passe faux
-            header("Location:  $_SERVER[HTTP_REFERER]?result=0");
+            header("Location:  $redirectUrl?result=0");
         }
     }
 ?>
