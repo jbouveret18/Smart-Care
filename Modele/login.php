@@ -1,3 +1,12 @@
+<?php
+if(!isset($_SESSION)) 
+{ 
+    session_start(); 
+}
+// Include Language file
+include_once "../php/translate.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/login.css">
     <link rel='stylesheet' href='../css/common.css'>
-    <link rel="shortcut icon" href="img/blank.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../img/blank.png" type="image/x-icon">
     <style>
         @import url('https://fonts.googleapis.com/css?family=Poppins');
     </style>
@@ -15,49 +24,49 @@
 <body>
     
     <?php
-        include '../php/display/en/navbar.php';
+        include '../php/navbar.php';
         
         if (isset($_GET['error']) && $_GET['error']==5){
-            echo("<span class='errorcenter'><p>You must be logged in to access the leaderboard</p></span>");
+            echo(''._LoginError5);
         }
         if (isset($_GET['error']) && $_GET['error']==6){
-            echo("<span class='errorcenter'><p>You must be logged in to access the dashboard</p></span>");
+            echo(''._LoginError6);
         }
         if (isset($_GET['error']) && $_GET['error']==7){
-            echo("<span class='errorcenter'><p>You must be logged in to access your account</p></span>");
+            echo(''._LoginError7);
         }
     ?>
     <div class="form">
         <div class="login">
-            <h2>Login</h2>
+            <h2><?= _Connect ?></h2>
             <form action="../php/loginform.php" method ="post">
-                <label for="usermail">E-mail address:</label>
-                <input type="text" id="usermail" name="mail" placeholder="Your e-mail.." pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required="required"><br>
+                <label for="usermail"><?= _Mail ?></label>
+                <input type="text" id="usermail" name="mail" placeholder="<?= _MailHolder ?>" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required="required"><br>
           
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" placeholder="Your password..">
+                <label for="password"><?= _Pass1 ?></label>
+                <input type="password" id="password" name="password" placeholder="<?= _Pass1Holder ?>">
                 <span class="error">
                 <?php
                 if (isset($_GET["error"])) {
                     if ($_GET["error"] == 3) {
-                        echo("Wrong e-mail address/wrong password<br><br>");
+                        echo(''._LoginError3);
                     }
                     if ($_GET["error"] == 4) {
-                        echo("This user does not exist<br><br>");
+                        echo(''._LoginError4);
                     }
                 }
                 ?>
                 </span>
-                <input type="submit" value="Login">
+                <input type="submit" value="<?= _Connexion ?>">
             </form>
-            <p><br><a href='../register.php'>No account yet? Join us</a></p>
+            <p><br><a href='../register.php'><?= _CreateAccount ?></a></p>
           </div>
     </div>
     
 
 
     <?php
-        include 'footer.html';
+        include 'footer.php';
     ?>
 </body>
 </html>
