@@ -1,3 +1,12 @@
+<?php
+if(!isset($_SESSION)) 
+{ 
+    session_start(); 
+}
+// Include Language file
+include_once "../php/translate.php";
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -6,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../img/blank.png" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <title>Mon compte</title>
+    <title><?= _Dashboard ?></title>
     <style>
         @import url('https://fonts.googleapis.com/css?family=Poppins');
     </style>
@@ -15,11 +24,14 @@
 </head>
 <body>
     <?php
-        session_start();
+        if(!isset($_SESSION)) 
+        { 
+            session_start(); 
+        }
         if (!isset($_SESSION['connected'])) {
             header('Location: login.php?error=6');
         }
-        include '../php/display/fr/navbar.php';
+        include '../php/navbar.php';
     ?>
 
     <div class="boite">
@@ -68,10 +80,10 @@
     </div>
     
     <div class="tab">
-        <button class="tablinks" onclick="openTabs(event, 'RC')" id="defaultOpen"><span class="tabTitle">Rythme cardiaque</span><img class="logoDash" src="../img/heartbeat.svg"></button>
-        <button class="tablinks" onclick="openTabs(event, 'Temperature')"><span class="tabTitle">Temperature corporelle</span><img class="logoDash" src="../img/thermos.svg"></button>
-        <button class="tablinks" onclick="openTabs(event, 'Db')"><span class="tabTitle">Volume sonore<img class="logoDash" src="../img/sound.svg"></span></button>
-        <button class="tablinks" onclick="openTabs(event, 'Gaz')"><span class="tabTitle">Quantité de gaz</span><img class="logoDash" src="../img/co2.svg"></button>
+        <button class="tablinks" onclick="openTabs(event, 'RC')" id="defaultOpen"><span class="tabTitle"><?= _Heart ?></span><img class="logoDash" src="../img/heartbeat.svg"></button>
+        <button class="tablinks" onclick="openTabs(event, 'Temperature')"><span class="tabTitle"><?= _Tempeature ?></span><img class="logoDash" src="../img/thermos.svg"></button>
+        <button class="tablinks" onclick="openTabs(event, 'Db')"><span class="tabTitle"><?= _Sound ?><img class="logoDash" src="../img/sound.svg"></span></button>
+        <button class="tablinks" onclick="openTabs(event, 'Gaz')"><span class="tabTitle"><?= _Gaz ?></span><img class="logoDash" src="../img/co2.svg"></button>
     </div>
     </div>
     
@@ -79,7 +91,7 @@
     <script src=../javascript/chart.js></script>
 
     <?php
-        include 'footer.html';
+        include 'footer.php';
     ?>
 
 </body>

@@ -1,3 +1,11 @@
+<?php
+if(!isset($_SESSION)) 
+{ 
+    session_start(); 
+}
+// Include Language file
+include_once "../php/translate.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,14 +18,14 @@
     <style>
         @import url('https://fonts.googleapis.com/css?family=Poppins');
     </style>
-    <title>Document</title>
+    <title><?= _Contact ?></title>
 </head>
 <body>
 <?php
-        include '../php/display/fr/navbar.php';
+        include '../php/navbar.php';
         ?>
 <?php
-        include 'footer.html';
+        include 'footer.php';
     ?>
 </body>
 </html>

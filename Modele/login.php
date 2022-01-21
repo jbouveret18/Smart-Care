@@ -1,3 +1,12 @@
+<?php
+if(!isset($_SESSION)) 
+{ 
+    session_start(); 
+}
+// Include Language file
+include_once "../php/translate.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,54 +19,54 @@
     <style>
         @import url('https://fonts.googleapis.com/css?family=Poppins');
     </style>
-    <title>Login</title>
+    <title><?= _Connexion ?></title>
 </head>
 <body>
     
     <?php
-        include '../php/display/fr/navbar.php';
+        include '../php/navbar.php';
         
         if (isset($_GET['error']) && $_GET['error']==5){
-            echo("<span class='errorcenter'><p>Vous devez être connecté pour accéder au leaderboard</p></span>");
+            echo(''._LoginError5);
         }
         if (isset($_GET['error']) && $_GET['error']==6){
-            echo("<span class='errorcenter'><p>Vous devez être connecté pour accéder au dashboard</p></span>");
+            echo(''._LoginError6);
         }
         if (isset($_GET['error']) && $_GET['error']==7){
-            echo("<span class='errorcenter'><p>Vous devez être connecté pour accéder à votre compte</p></span>");
+            echo(''._LoginError7);
         }
     ?>
     <div class="form">
         <div class="login">
-            <h2>Connexion</h2>
+            <h2><?= _Connect ?></h2>
             <form action="../php/loginform.php" method ="post">
-                <label for="usermail">Adresse mail:</label>
-                <input type="text" id="usermail" name="mail" placeholder="Votre mail.." pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required="required"><br>
+                <label for="usermail"><?= _Mail ?></label>
+                <input type="text" id="usermail" name="mail" placeholder="<?= _MailHolder ?>" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required="required"><br>
           
-                <label for="password">Mot de passe:</label>
-                <input type="password" id="password" name="password" placeholder="Votre mot de passe..">
+                <label for="password"><?= _Pass1 ?></label>
+                <input type="password" id="password" name="password" placeholder="<?= _Pass1Holder ?>">
                 <span class="error">
                 <?php
                 if (isset($_GET["error"])) {
                     if ($_GET["error"] == 3) {
-                        echo("Mauvaise adresse mail/Mot de passe faux<br><br>");
+                        echo(''._LoginError3);
                     }
                     if ($_GET["error"] == 4) {
-                        echo("Ce nom d'utilisateur n'existe pas<br><br>");
+                        echo(''._LoginError4);
                     }
                 }
                 ?>
                 </span>
-                <input type="submit" value="Se connecter">
+                <input type="submit" value="<?= _Connexion ?>">
             </form>
-            <p><br><a href='../register.php'>Pas encore de compte? Rejoignez-nous</a></p>
+            <p><br><a href='../register.php'><?= _CreateAccount ?></a></p>
           </div>
     </div>
     
 
 
     <?php
-        include 'footer.html';
+        include 'footer.php';
     ?>
 </body>
 </html>

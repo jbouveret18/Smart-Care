@@ -1,16 +1,16 @@
 <?php
 if (isset($_GET["result"])) {
     if ($_GET["result"] == 0) {
-        echo("<span class='error'><p>Mot de passe faux</p></span>  ");
+        echo(''._AccountRes0);
     }
     if ($_GET["result"] == 1) {
-        echo("<span class='succes'><p>Mot de passe changé avec succès</p></span>");
+        echo(''._AccountRes1);
     }
     if ($_GET["result"] == 2) {
-      echo("<span class='error'><p>L'adresse mail est déjà utilisé</p></span>");
+      echo(''._AccountRes2);
     }
     if ($_GET["result"] == 3) {
-      echo("<span class='succes'><p>Adresse mail modifié avec succès</p></span>");
+      echo(''._AccountRes3);
     }
   }
 ?>
