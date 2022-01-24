@@ -3,7 +3,11 @@
                 <div class='dropdown'>
                     <button class='dropbtn'>
                         <?php
-                        $lan=$_COOKIE['lang'];
+                        if (isset($_COOKIE['lang'])) {
+                            $lan=$_COOKIE['lang'];
+                        } else { 
+                            $lan='fr';
+                        }
                         if ($lan=="en") {
                             echo("<img class='flag' src='../img/Drapeauen.png' class='flag1'>");    
                         } else{
@@ -13,7 +17,11 @@
                     </button>
                     <div class='dropdown-content'>
                     <?php
-                        $lan=$_COOKIE['lang'];
+                        if (isset($_COOKIE['lang'])) {
+                            $lan=$_COOKIE['lang'];
+                        } else { 
+                            $lan='fr';
+                        }
                         if ($lan=="en") {
                             echo("
                                 <button class='dropbtn' onclick=\"redirect(event,'fr')\">
