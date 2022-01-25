@@ -36,6 +36,13 @@ include_once "../php/translate.php";
             echo(''._LoginError7);
         }
     ?>
+    <span class="success">
+        <?php
+        if (isset($_GET['success']) && $_GET['success']==1){
+            echo(''._AccountCreated);
+        }
+        ?>
+    </span>
     <div class="form">
         <div class="login">
             <h2><?= _Connect ?></h2>

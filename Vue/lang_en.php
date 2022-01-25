@@ -55,6 +55,7 @@ define("_LoginError4", "This username does not exist<br>");
 define("_LoginError5", "<span class='errorcenter'><p>You must be logged in to access the leaderboard</p></span>");
 define("_LoginError6", "<span class='errorcenter'><p>You must be logged in to access the dashboard</p></span>");
 define("_LoginError7", "<span class='errorcenter'><p>You must be logged in to access your account</p></span>");
+define("_AccountCreated", "<p>Account created successfully</p>");
 
 //Dashboard
 define("_Heart", "Heartbeat");
@@ -90,4 +91,30 @@ define("_SearchUser", "Search an user");
 define("_TitleAccount", "Account");
 define("_TitleIndex", "Welcome");
 define("_TitleRegister", "Register");
+
+//About
+define("_AboutTitle1", "Who are we?");
+define("_AboutTitle2", "What is our goal?");
+define("_AboutTitle3", "How?");
+define("_AboutText1", "We are ISEP students in the first year of the engineering cycle.");
+define("_AboutText2", "Our goal is to deliver a functional website that meets the client's needs.");
+define("_AboutText3", "Using various languages as html, css, javscript, php and SQL.");
+
+//Privacy
+define("_confidentialityTitle", "Confidentiality is our priority");
+define("_confidentialityText", "Some of your data such as your heart rate or your temperature is<br/>considerable as medical data and that is why we will make sure that <br/>no one has access to it ");
+
+//FAQs
+define("_helpTitle1", "I prompted the wrong item number, what should I do?");
+define("_helpTitle2", "Do I have to have a connected watch to use the site?");
+define("_helpTitle3", "Any other questions?");
+define("_helpText1", "Contact us at the following address: contactus@mail.com so that we can solve your problem.");
+define("_helpText2", "Yes !");
+define("_helpText3", "Contact us at the following address: contactus@mail.com, we will try to answer them.");
+
+//Contact
+define("_contactTitle1", "By email:");
+define("_contactTitle2", "By phone:");
+
+
 ?>

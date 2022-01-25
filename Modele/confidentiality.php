@@ -21,10 +21,19 @@ include_once "../php/translate.php";
     <title><?= _Confidentiality ?></title>
 </head>
 <body>
-<?php
+    <?php
         include '../php/navbar.php';
-        ?>
-<?php
+    ?>
+
+    <div class="sidePageDiv">
+        <span class="bigTitle"><?= _Confidentiality ?></span><br><br>
+
+        
+        <span class="sidePageQuestion"><?= _confidentialityTitle ?></span>
+        <p class="sidePageText"><?= _confidentialityText ?></p>            
+    </div>
+
+    <?php
         include 'footer.php';
     ?>
 </body>

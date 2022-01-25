@@ -21,11 +21,27 @@ include_once "../php/translate.php";
     <title><?= _About ?></title>
 </head>
 <body>
-<?php
-        include '../php/navbar.php';
-        ?>
-<?php
-        include 'footer.php';
+    <?php
+       include '../php/navbar.php';
+    ?>
+
+    <div class="sidePageDiv">
+        <span class="bigTitle"><?= _About ?></span><br><br>
+
+        
+        <span class="sidePageQuestion"><?= _AboutTitle1 ?></span>
+        <p class="sidePageText"><?= _AboutText1 ?><br/><br/></p>
+
+        <span class="sidePageQuestion"><?= _AboutTitle2 ?></span>
+        <p class="sidePageText"><?= _AboutText2 ?><br/><br/></p>
+
+        <span class="sidePageQuestion"><?= _AboutTitle3 ?></span>
+        <p class="sidePageText"><?= _AboutText3 ?><br/><br/></p>
+            
+    </div>
+
+    <?php
+      include 'footer.php';
     ?>
 </body>
 </html>

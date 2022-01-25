@@ -164,3 +164,22 @@ nav{
     border-color: #8AC144 ;
   }
   
+  .bigTitle{
+    color: #8AC144 ;
+    font-size: calc(20px + 0.75vw);
+  }
+
+  .sidePageDiv{
+    margin-top: 5vh ;
+    margin-left: 15vw;
+  }
+
+  .sidePageQuestion{
+    margin-left: 2vw;
+    font-size: calc(15px + 0.5vw);
+    text-decoration: underline;
+  }
+
+  .sidePageText{
+    margin-left: 2vw;
+  }
