@@ -47,7 +47,6 @@ define("_Register2", "S'inscrire");
 define("_RegisterError2", "Veuillez saisir deux mots de passe identiques");
 define("_RegisterError1", "Cette adresse mail est déjà utilisée");
 define("_RegisterError5", "<span class='errorcenter'><p>Compte crée avec succès</p></span>");
-define("_RegisterError6", "Veuillez saisir deux mots de passe identiques");
 
 //Login
 define("_Connect", "Se connecter");
@@ -57,6 +56,7 @@ define("_LoginError4", "Ce nom d'utilisateur n'existe pas<br><br>");
 define("_LoginError5", "<span class='errorcenter'><p>Vous devez être connecté pour accéder au leaderboard</p></span>");
 define("_LoginError6", "<span class='errorcenter'><p>Vous devez être connecté pour accéder au dashboard</p></span>");
 define("_LoginError7", "<span class='errorcenter'><p>Vous devez être connecté pour accéder à votre compte</p></span>");
+define("_AccountCreated", "<p>Compte crée avec succès</p>");
 
 //Dashboard
 define("_Heart", "Rythme cardiaque");
@@ -93,4 +93,29 @@ define("_SearchUser", "Rechercher un utilisateur");
 define("_TitleAccount", "Mon compte");
 define("_TitleIndex", "Accueil");
 define("_TitleRegister", "Créer un compte");
+
+//About
+define("_AboutTitle1", "Qui sommes-nous?");
+define("_AboutTitle2", "Quel est notre objectif?");
+define("_AboutTitle3", "Comment?");
+define("_AboutText1", "Nous sommes de étudiants de l'ISEP en première année du cycle d'ingénieur.");
+define("_AboutText2", "Notre objectif est de livrer un site web fonctionnel qui corresponde au besoin du client.");
+define("_AboutText3", "En utilisant divers langages comme html, css, javscript, php et du SQL.");
+
+//Confidentialité
+define("_confidentialityTitle", "La confidentialité est notre priorité");
+define("_confidentialityText", "Certaines de vos données commes vos pulsations cardiaque ou bien votre température sont<br/>considérable comme des données médicales et c'est pour cela que nous nous assurerons que <br/>personne n'y ait accès");
+
+//FAQ
+define("_helpTitle1", "J'ai rentré le mauvais numéro d'objet, que faire?");
+define("_helpTitle2", "Suis-je obliger d'avoir une montre connecté pour utiliser le site?");
+define("_helpTitle3", "D'autres questions?");
+define("_helpText1", "Contactez nous à l'adresse suivante: contacteznous@mail.com pour que nous réglions votre problème.");
+define("_helpText2", "Oui !");
+define("_helpText3", "Contactez nous à l'adresse suivante: contacteznous@mail.com, nous tacherons d'y répondre.");
+
+//Contact
+define("_contactTitle1", "Par mail :");
+define("_contactTitle2", "Par téléphone :");
+
 ?>

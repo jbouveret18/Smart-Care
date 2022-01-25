@@ -21,10 +21,22 @@ include_once "../php/translate.php";
     <title><?= _Contact ?></title>
 </head>
 <body>
-<?php
+    <?php
         include '../php/navbar.php';
-        ?>
-<?php
+    ?>
+
+    <div class="sidePageDiv">
+        <span class="bigTitle"><?= _Contact ?></span><br><br>
+
+        <span class="sidePageQuestion"><?= _contactTitle1 ?></span>
+        <p class="sidePageText">contacteznous@mail.com<br/><br/></p>
+
+        <span class="sidePageQuestion"><?= _contactTitle2 ?></span>
+        <p class="sidePageText">0123456789<br/><br/></p>
+
+    </div>
+
+    <?php
         include 'footer.php';
     ?>
 </body>

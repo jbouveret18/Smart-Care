@@ -33,7 +33,7 @@ if ($result->num_rows > 0) {
                     echo "Error: " . $sql . "<br>" . $conn->error;
                     }
                     $conn->close();
-        header("Location:  $redirectUrl?error=5");
+        header("Location:  ../Modele/login.php?success=1");
     } else {
         header("Location:  $redirectUrl?error=2");
     }
