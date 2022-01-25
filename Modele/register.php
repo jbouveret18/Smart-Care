@@ -25,8 +25,8 @@ include_once "../php/translate.php";
     <?php
         include '../php/navbar.php';
         
-        if (isset($_GET['error']) && $_GET['error']==5){
-            echo(''._RegisterError5);
+        if (isset($_GET['error']) && $_GET['error']==10){
+            echo(''._RegisterError10);
         }
     ?>
     <h2><?= _Register ?></h2>

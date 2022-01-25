@@ -41,6 +41,7 @@ include_once "../php/translate.php";
   <button class="tablinks" onclick="openTabs(event, 'general')" id="defaultOpen"><?= _Information ?></button>
   <button class="tablinks" onclick="openTabs(event, 'changemdp')"><?= _ChangePsswd ?></button>
   <button class="tablinks" onclick="openTabs(event, 'changemail')"><?= _ChangeMail ?></button>
+  <button class="tablinks" onclick="openTabs(event, 'delAccount')"><span class='error'><?= _DeleteAccount ?></span></button>
 </div>
 
 <div id="general" class="tabcontent">
@@ -73,6 +74,20 @@ include_once "../php/translate.php";
   <input type="password" id="password" name="password" placeholder="<?= _Pass1Holder ?>"><br/>
   <input type="submit" value="<?= _ChangeMail ?>">
   </form>
+</div>
+
+<div id="delAccount" class="tabcontent">
+  <h3><span class='error'><?= _DeleteAccount ?></span></h3>
+    <button onclick="deleteaccount()"><?= _DeleteAccount ?></button>
+
+    <script>
+        function deleteaccount() {
+            result = confirm('<?= _DeleteAccountConfirm ?>');
+            if (result==1) {
+              location.replace("../php/deleteAccount.php")
+            }
+        }
+    </script>
 </div>
 
 <script src=../javascript/tabs.js></script>

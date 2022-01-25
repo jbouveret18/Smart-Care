@@ -30,10 +30,10 @@ include_once "../php/translate.php";
 
         
         <span class="sidePageQuestion"><?= _helpTitle1 ?></span>
-        <p class="sidePageText"><?= _helpTitle1 ?><br/><br/></p>
+        <p class="sidePageText"><?= _helpText1 ?><br/><br/></p>
 
-        <span class="sidePageQuestion"><?= _helpText2 ?></span>
-        <p class="sidePageText"><?= _helpTitle1 ?><br/><br/></p>
+        <span class="sidePageQuestion"><?= _helpTitle2 ?></span>
+        <p class="sidePageText"><?= _helpText2 ?><br/><br/></p>
 
         <span class="sidePageQuestion"><?= _helpTitle3 ?></span>
         <p class="sidePageText"><?= _helpText3 ?><br/><br/></p>

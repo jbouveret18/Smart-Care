@@ -2,9 +2,9 @@
     require  'connexion.php';
     unset($time);
     unset($Value);
-    $sqlprep = "SELECT `Valeur`,`Date` FROM `$table` ORDER BY Date";
+    $sqlprep = "SELECT `Valeur`,`Date` FROM `$table` WHERE id_user = ? ORDER BY Date";
     $sql = $conn->prepare($sqlprep);
-    //$sql->bind_param("s", $table);
+    $sql->bind_param("i", $_SESSION['id']);
     $sql->execute();
     $result = $sql->get_result();
 

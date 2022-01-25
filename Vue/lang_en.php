@@ -45,7 +45,7 @@ define("_NobjectHolder", "Your object number..");
 define("_Register2", "Register");
 define("_RegisterError2", "Please enter two identical passwords");
 define("_RegisterError1", "This email address is already in use");
-define("_RegisterError5", "<span class='errorcenter'><p>Account successfully created</p></span>");
+define("_RegisterError10", "<span class='successcenter'><p>Account deleted successfully</p></span>");
 
 //Login
 define("_Connect", "Login");
@@ -77,6 +77,9 @@ define("_AccountRes0", "<span class='error'><p>Wrong password</p></span>");
 define("_AccountRes1", "<span class='succes'><p>Password successfully changed</p></span>");
 define("_AccountRes2", "<span class='error'><p>The email address is already in use</p></span>");
 define("_AccountRes3", "<span class='succes'><p>Email address modified successfully</p></span>");
+define("_DeleteAccount", "Delete your account");
+define("_DeleteAccountConfirm", "Are you sure you want to delete your account?");
+
 
 //Leaderboard
 define("_You", "You");
@@ -106,10 +109,10 @@ define("_confidentialityText", "Some of your data such as your heart rate or you
 
 //FAQs
 define("_helpTitle1", "I prompted the wrong item number, what should I do?");
-define("_helpTitle2", "Do I have to have a connected watch to use the site?");
+define("_helpTitle2", "No data appears in the statistics page, what should I do?");
 define("_helpTitle3", "Any other questions?");
 define("_helpText1", "Contact us at the following address: contactus@mail.com so that we can solve your problem.");
-define("_helpText2", "Yes !");
+define("_helpText2", "You probably entered the wrong watch number, contact us to solve this problem.");
 define("_helpText3", "Contact us at the following address: contactus@mail.com, we will try to answer them.");
 
 //Contact

@@ -46,7 +46,7 @@ define("_NobjectHolder", "Votre numéro d'objet..");
 define("_Register2", "S'inscrire");
 define("_RegisterError2", "Veuillez saisir deux mots de passe identiques");
 define("_RegisterError1", "Cette adresse mail est déjà utilisée");
-define("_RegisterError5", "<span class='errorcenter'><p>Compte crée avec succès</p></span>");
+define("_RegisterError10", "<span class='successcenter'><p>Compte supprimé avec succès</p></span>");
 
 //Login
 define("_Connect", "Se connecter");
@@ -79,6 +79,8 @@ define("_AccountRes0", "<span class='error'><p>Mot de passe faux</p></span>");
 define("_AccountRes1", "<span class='succes'><p>Mot de passe changé avec succès</p></span>");
 define("_AccountRes2", "<span class='error'><p>L'adresse mail est déjà utilisé</p></span>");
 define("_AccountRes3", "<span class='succes'><p>Adresse mail modifié avec succès</p></span>");
+define("_DeleteAccount", "Supprimer votre compte");
+define("_DeleteAccountConfirm", "Êtes vous sur de vouloir supprimer votre compte?");
 
 //Leaderboard
 define("_You", "Vous");
@@ -108,10 +110,10 @@ define("_confidentialityText", "Certaines de vos données commes vos pulsations 
 
 //FAQ
 define("_helpTitle1", "J'ai rentré le mauvais numéro d'objet, que faire?");
-define("_helpTitle2", "Suis-je obliger d'avoir une montre connecté pour utiliser le site?");
+define("_helpTitle2", "Aucune donnée n'apparait dans la page statistique, que faire?");
 define("_helpTitle3", "D'autres questions?");
 define("_helpText1", "Contactez nous à l'adresse suivante: contacteznous@mail.com pour que nous réglions votre problème.");
-define("_helpText2", "Oui !");
+define("_helpText2", "Vous avez probablement rentré un mauvais numéro de montre, contactez nous pour résoudre ce problème.");
 define("_helpText3", "Contactez nous à l'adresse suivante: contacteznous@mail.com, nous tacherons d'y répondre.");
 
 //Contact
