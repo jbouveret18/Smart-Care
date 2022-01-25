@@ -1,7 +1,7 @@
 <?php
     $servername = "localhost";
-    $username = "root";
-    $password = "";
+    $username = "root"; //Créer un nouvel utilisateur
+    $password = ""; // Mot de passe du nouvel utilisateur
     $dbname = "app";
     // Create connection
     global $conn;
